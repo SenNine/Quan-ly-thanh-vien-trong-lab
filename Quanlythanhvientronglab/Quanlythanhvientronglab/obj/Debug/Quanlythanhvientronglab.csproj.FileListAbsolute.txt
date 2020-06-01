@@ -25,3 +25,8 @@ C:\Users\Admin\Desktop\Quan-ly-thanh-vien-trong-lab\Quanlythanhvientronglab\Quan
 C:\Users\Admin\Desktop\Quan-ly-thanh-vien-trong-lab\Quanlythanhvientronglab\Quanlythanhvientronglab\obj\Debug\Quanlythanhvientronglab.Views.frmChucVu.resources
 C:\Users\Admin\Desktop\Quan-ly-thanh-vien-trong-lab\Quanlythanhvientronglab\Quanlythanhvientronglab\obj\Debug\Quanlythanhvientronglab.Views.frmPhanCong.resources
 C:\Users\Admin\Desktop\Quan-ly-thanh-vien-trong-lab\Quanlythanhvientronglab\Quanlythanhvientronglab\obj\Debug\Quanlythanhvientronglab.Views.frmThanNhan.resources
+C:\Users\Admin\Desktop\Quan-ly-thanh-vien-trong-lab\Quanlythanhvientronglab\Quanlythanhvientronglab\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Desktop\Quan-ly-thanh-vien-trong-lab\Quanlythanhvientronglab\Quanlythanhvientronglab\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\Quan-ly-thanh-vien-trong-lab\Quanlythanhvientronglab\Quanlythanhvientronglab\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Desktop\Quan-ly-thanh-vien-trong-lab\Quanlythanhvientronglab\Quanlythanhvientronglab\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Desktop\Quan-ly-thanh-vien-trong-lab\Quanlythanhvientronglab\Quanlythanhvientronglab\obj\Debug\Quanlythanhvientronglab.csproj.CopyComplete

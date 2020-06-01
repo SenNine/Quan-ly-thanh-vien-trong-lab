@@ -48,6 +48,7 @@
             this.btn_luong = new System.Windows.Forms.Button();
             this.btn_duan = new System.Windows.Forms.Button();
             this.btn_hosonv = new System.Windows.Forms.Button();
+            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -159,7 +160,7 @@
             this.troGiupToolStrip});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1287, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1287, 28);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -168,27 +169,28 @@
             this.chucNangToolStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exportToolStripMenuItem,
             this.tìmKiếmToolStripMenuItem,
-            this.thoátToolStripMenuItem});
+            this.thoátToolStripMenuItem,
+            this.testToolStripMenuItem});
             this.chucNangToolStrip.Name = "chucNangToolStrip";
-            this.chucNangToolStrip.Size = new System.Drawing.Size(93, 26);
+            this.chucNangToolStrip.Size = new System.Drawing.Size(93, 24);
             this.chucNangToolStrip.Text = "Chức năng";
             // 
             // exportToolStripMenuItem
             // 
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.exportToolStripMenuItem.Text = "Export";
             // 
             // tìmKiếmToolStripMenuItem
             // 
             this.tìmKiếmToolStripMenuItem.Name = "tìmKiếmToolStripMenuItem";
-            this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
+            this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.tìmKiếmToolStripMenuItem.Text = "Tìm kiếm";
             // 
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.thoátToolStripMenuItem.Text = "Thoát";
             // 
             // troGiupToolStrip
@@ -196,7 +198,7 @@
             this.troGiupToolStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.thôngTinBảnQuyềnToolStripMenuItem});
             this.troGiupToolStrip.Name = "troGiupToolStrip";
-            this.troGiupToolStrip.Size = new System.Drawing.Size(78, 26);
+            this.troGiupToolStrip.Size = new System.Drawing.Size(78, 24);
             this.troGiupToolStrip.Text = "Trợ giúp";
             // 
             // thôngTinBảnQuyềnToolStripMenuItem
@@ -248,6 +250,13 @@
             this.btn_hosonv.UseVisualStyleBackColor = true;
             this.btn_hosonv.Click += new System.EventHandler(this.btn_hosonv_Click);
             // 
+            // testToolStripMenuItem
+            // 
+            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.testToolStripMenuItem.Text = "Test";
+            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
+            // 
             // frmGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -296,5 +305,6 @@
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem troGiupToolStrip;
         private System.Windows.Forms.ToolStripMenuItem thôngTinBảnQuyềnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
     }
 }

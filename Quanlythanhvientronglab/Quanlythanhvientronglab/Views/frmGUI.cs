@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Quanlythanhvientronglab.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -57,6 +58,17 @@ namespace Quanlythanhvientronglab.Views
         {
             frmThanNhan frmtn = new frmThanNhan();
             frmtn.Show();
+        }
+
+        private void testToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var _context=new DBManageContext())
+            {
+                ClassChucVu cv = new ClassChucVu { MaChucVu = "GD", TenChucVu = "Giam doc" };
+                _context.tbChucVu.Add(cv);
+                _context.SaveChanges();
+            }
+            MessageBox.Show("Finish");
         }
     }
 }
