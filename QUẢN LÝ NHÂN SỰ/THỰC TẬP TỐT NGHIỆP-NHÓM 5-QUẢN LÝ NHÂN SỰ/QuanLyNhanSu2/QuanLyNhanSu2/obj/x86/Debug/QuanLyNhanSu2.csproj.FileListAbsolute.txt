@@ -186,3 +186,7 @@ D:\Download\QUẢN LÝ NHÂN SỰ\THỰC TẬP TỐT NGHIỆP-NHÓM 5-QUẢN LÝ
 D:\Download\QUẢN LÝ NHÂN SỰ\THỰC TẬP TỐT NGHIỆP-NHÓM 5-QUẢN LÝ NHÂN SỰ\QuanLyNhanSu2\QuanLyNhanSu2\obj\x86\Debug\QuanLyNhanSu2.pdb
 D:\Download\QUẢN LÝ NHÂN SỰ\THỰC TẬP TỐT NGHIỆP-NHÓM 5-QUẢN LÝ NHÂN SỰ\QuanLyNhanSu2\QuanLyNhanSu2\obj\x86\Debug\QuanLyNhanSu2.csproj.CoreCompileInputs.cache
 D:\Download\QUẢN LÝ NHÂN SỰ\THỰC TẬP TỐT NGHIỆP-NHÓM 5-QUẢN LÝ NHÂN SỰ\QuanLyNhanSu2\QuanLyNhanSu2\obj\x86\Debug\Interop.Office.dll
+C:\Users\Admin\Desktop\Quan-ly-thanh-vien-trong-lab\QUẢN LÝ NHÂN SỰ\THỰC TẬP TỐT NGHIỆP-NHÓM 5-QUẢN LÝ NHÂN SỰ\QuanLyNhanSu2\QuanLyNhanSu2\obj\x86\Debug\QuanLyNhanSu2.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\Quan-ly-thanh-vien-trong-lab\QUẢN LÝ NHÂN SỰ\THỰC TẬP TỐT NGHIỆP-NHÓM 5-QUẢN LÝ NHÂN SỰ\QuanLyNhanSu2\QuanLyNhanSu2\obj\x86\Debug\Interop.Office.dll
+C:\Users\Admin\Desktop\Quan-ly-thanh-vien-trong-lab\QUẢN LÝ NHÂN SỰ\THỰC TẬP TỐT NGHIỆP-NHÓM 5-QUẢN LÝ NHÂN SỰ\QuanLyNhanSu2\QuanLyNhanSu2\obj\x86\Debug\QuanLyNhanSu2.exe
+C:\Users\Admin\Desktop\Quan-ly-thanh-vien-trong-lab\QUẢN LÝ NHÂN SỰ\THỰC TẬP TỐT NGHIỆP-NHÓM 5-QUẢN LÝ NHÂN SỰ\QuanLyNhanSu2\QuanLyNhanSu2\obj\x86\Debug\QuanLyNhanSu2.pdb

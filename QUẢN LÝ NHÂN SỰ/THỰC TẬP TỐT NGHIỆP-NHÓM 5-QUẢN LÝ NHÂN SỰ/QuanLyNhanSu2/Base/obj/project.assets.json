@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Download\\QUẢN LÝ NHÂN SỰ\\THỰC TẬP TỐT NGHIỆP-NHÓM 5-QUẢN LÝ NHÂN SỰ\\QuanLyNhanSu2\\Base\\Base.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Quan-ly-thanh-vien-trong-lab\\QUẢN LÝ NHÂN SỰ\\THỰC TẬP TỐT NGHIỆP-NHÓM 5-QUẢN LÝ NHÂN SỰ\\QuanLyNhanSu2\\Base\\Base.csproj",
       "projectName": "Base",
-      "projectPath": "D:\\Download\\QUẢN LÝ NHÂN SỰ\\THỰC TẬP TỐT NGHIỆP-NHÓM 5-QUẢN LÝ NHÂN SỰ\\QuanLyNhanSu2\\Base\\Base.csproj",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\Quan-ly-thanh-vien-trong-lab\\QUẢN LÝ NHÂN SỰ\\THỰC TẬP TỐT NGHIỆP-NHÓM 5-QUẢN LÝ NHÂN SỰ\\QuanLyNhanSu2\\Base\\Base.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\Download\\QUẢN LÝ NHÂN SỰ\\THỰC TẬP TỐT NGHIỆP-NHÓM 5-QUẢN LÝ NHÂN SỰ\\QuanLyNhanSu2\\Base\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\Quan-ly-thanh-vien-trong-lab\\QUẢN LÝ NHÂN SỰ\\THỰC TẬP TỐT NGHIỆP-NHÓM 5-QUẢN LÝ NHÂN SỰ\\QuanLyNhanSu2\\Base\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
