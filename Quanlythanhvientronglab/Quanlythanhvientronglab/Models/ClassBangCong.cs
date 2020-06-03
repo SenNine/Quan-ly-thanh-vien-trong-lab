@@ -8,21 +8,16 @@ using System.Threading.Tasks;
 
 namespace Quanlythanhvientronglab.Models
 {
-    [Table("HoSoNV")]
-    public class ClassHoSoNV
+    public class ClassBangCong
     {
+        public ClassHoSoNV HoSo { set; get; }
         [Key]
-        [Column(Order =10)]
+        [Column(Order = 10)]
         public string MaNV { set; get; }
         [Key]
         [Column(Order = 20)]
         public string TenNV { set; get; }
-        public string NgaySinh { set; get; }
-        public string GioiTinh { set; get; }
-        public string TonGiao { set; get; }
-        public string SDT { set; get; }
-        public string Email { set; get; }        
-        public string TenChucVu { set; get; }
-        public ClassChucVu ChucVu { set; get; }
+        public float SoNgayCong { set; get; }
+        public float GioTangCa { set; get; }
     }
 }

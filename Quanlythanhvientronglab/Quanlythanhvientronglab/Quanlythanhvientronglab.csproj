@@ -56,8 +56,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\ClassBangCong.cs" />
+    <Compile Include="Models\ClassBangLuong.cs" />
     <Compile Include="Models\ClassChucVu.cs" />
+    <Compile Include="Models\ClassDuAn.cs" />
     <Compile Include="Models\ClassHoSoNV.cs" />
+    <Compile Include="Models\ClassPhanCong.cs" />
+    <Compile Include="Models\ClassThanNhan.cs" />
     <Compile Include="Models\DBManageContext.cs" />
     <Compile Include="Views\frmBangCong.cs">
       <SubType>Form</SubType>
