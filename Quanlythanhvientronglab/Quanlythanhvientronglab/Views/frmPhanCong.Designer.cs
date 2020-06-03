@@ -262,7 +262,7 @@
             // 
             // TenDA
             // 
-            this.TenDA.HeaderText = "Mã Dự Án";
+            this.TenDA.HeaderText = "Ten Dự Án";
             this.TenDA.MinimumWidth = 6;
             this.TenDA.Name = "TenDA";
             // 

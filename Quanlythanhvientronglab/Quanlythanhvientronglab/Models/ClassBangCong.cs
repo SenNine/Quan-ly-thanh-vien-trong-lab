@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Quanlythanhvientronglab.Models
 {
+    [Table("BangCong")]
     public class ClassBangCong
     {
         public ClassHoSoNV HoSo { set; get; }

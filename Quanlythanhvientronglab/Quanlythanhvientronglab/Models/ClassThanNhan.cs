@@ -8,17 +8,16 @@ using System.Threading.Tasks;
 
 namespace Quanlythanhvientronglab.Models
 {
+    [Table("ThanNhan")]
     public class ClassThanNhan
     {
         public ClassHoSoNV hoso { set; get; }
         [Key]
         [Column(Order =10)]
-        public string MaNV { set; get; }
-        [Key]
-        [Column(Order = 20)]
+        public string MaNV { set; get; }        
         public string TenNV { set; get; }
         [Key]
-        [Column(Order =30)]
+        [Column(Order =20)]
         public string TenThanNhan { set; get; }
         public string QuanHe { set; get; }
 

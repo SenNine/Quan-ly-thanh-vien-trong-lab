@@ -47,7 +47,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayCong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoNgayCong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GioTangCa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -232,7 +232,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaNV,
             this.TenNV,
-            this.NgayCong,
+            this.SoNgayCong,
             this.GioTangCa});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.Location = new System.Drawing.Point(0, 268);
@@ -254,11 +254,11 @@
             this.TenNV.MinimumWidth = 6;
             this.TenNV.Name = "TenNV";
             // 
-            // NgayCong
+            // SoNgayCong
             // 
-            this.NgayCong.HeaderText = "Số Ngày Công";
-            this.NgayCong.MinimumWidth = 6;
-            this.NgayCong.Name = "NgayCong";
+            this.SoNgayCong.HeaderText = "Số Ngày Công";
+            this.SoNgayCong.MinimumWidth = 6;
+            this.SoNgayCong.Name = "SoNgayCong";
             // 
             // GioTangCa
             // 
@@ -305,7 +305,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayCong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoNgayCong;
         private System.Windows.Forms.DataGridViewTextBoxColumn GioTangCa;
     }
 }

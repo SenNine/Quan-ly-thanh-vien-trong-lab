@@ -19,8 +19,7 @@ namespace Quanlythanhvientronglab.Models
         [Key]
         [Column(Order = 20)]
         public string MaNV { set; get; }
-        [Key]
-        [Column(Order = 30)]
+        
         public string TenNV { set; get; }
     }
 }

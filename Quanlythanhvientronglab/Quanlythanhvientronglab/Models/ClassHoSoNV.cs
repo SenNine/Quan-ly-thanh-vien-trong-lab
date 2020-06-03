@@ -22,7 +22,7 @@ namespace Quanlythanhvientronglab.Models
         public string TonGiao { set; get; }
         public string SDT { set; get; }
         public string Email { set; get; }        
-        public string TenChucVu { set; get; }
+        public string MaChucVu { set; get; }
         public ClassChucVu ChucVu { set; get; }
     }
 }

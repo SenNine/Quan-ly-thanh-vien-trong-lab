@@ -11,8 +11,8 @@ namespace Quanlythanhvientronglab.Models
     [Table("ChucVu")]
     public class ClassChucVu
     {        
-        public string MaChucVu { set; get; }
-        [Key]
+        [Key]        
+        public string MaChucVu { set; get; }        
         public string TenChucVu { set; get; }
         public float HeSoLuong { set; get; }
     }

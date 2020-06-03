@@ -40,7 +40,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HSL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HeSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Luong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -151,7 +151,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaNV,
             this.TenNV,
-            this.HSL,
+            this.HeSoLuong,
             this.Luong});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.Location = new System.Drawing.Point(0, 224);
@@ -173,11 +173,11 @@
             this.TenNV.MinimumWidth = 6;
             this.TenNV.Name = "TenNV";
             // 
-            // HSL
+            // HeSoLuong
             // 
-            this.HSL.HeaderText = "Hệ Số Lương";
-            this.HSL.MinimumWidth = 6;
-            this.HSL.Name = "HSL";
+            this.HeSoLuong.HeaderText = "Hệ Số Lương";
+            this.HeSoLuong.MinimumWidth = 6;
+            this.HeSoLuong.Name = "HeSoLuong";
             // 
             // Luong
             // 
@@ -215,7 +215,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HSL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HeSoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn Luong;
     }
 }
