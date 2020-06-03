@@ -391,6 +391,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaNV,
@@ -417,7 +418,6 @@
             this.MaNV.MinimumWidth = 6;
             this.MaNV.Name = "MaNV";
             this.MaNV.ReadOnly = true;
-            this.MaNV.Width = 125;
             // 
             // HoTen
             // 
@@ -425,7 +425,6 @@
             this.HoTen.MinimumWidth = 6;
             this.HoTen.Name = "HoTen";
             this.HoTen.ReadOnly = true;
-            this.HoTen.Width = 125;
             // 
             // NgaySinh
             // 
@@ -433,7 +432,6 @@
             this.NgaySinh.MinimumWidth = 6;
             this.NgaySinh.Name = "NgaySinh";
             this.NgaySinh.ReadOnly = true;
-            this.NgaySinh.Width = 125;
             // 
             // GioiTinh
             // 
@@ -441,7 +439,6 @@
             this.GioiTinh.MinimumWidth = 6;
             this.GioiTinh.Name = "GioiTinh";
             this.GioiTinh.ReadOnly = true;
-            this.GioiTinh.Width = 125;
             // 
             // TonGiao
             // 
@@ -449,7 +446,6 @@
             this.TonGiao.MinimumWidth = 6;
             this.TonGiao.Name = "TonGiao";
             this.TonGiao.ReadOnly = true;
-            this.TonGiao.Width = 125;
             // 
             // DiaChi
             // 
@@ -457,7 +453,6 @@
             this.DiaChi.MinimumWidth = 6;
             this.DiaChi.Name = "DiaChi";
             this.DiaChi.ReadOnly = true;
-            this.DiaChi.Width = 125;
             // 
             // SDT
             // 
@@ -465,7 +460,6 @@
             this.SDT.MinimumWidth = 6;
             this.SDT.Name = "SDT";
             this.SDT.ReadOnly = true;
-            this.SDT.Width = 125;
             // 
             // Email
             // 
@@ -473,7 +467,6 @@
             this.Email.MinimumWidth = 6;
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;
-            this.Email.Width = 125;
             // 
             // ChucVu
             // 
@@ -481,7 +474,6 @@
             this.ChucVu.MinimumWidth = 6;
             this.ChucVu.Name = "ChucVu";
             this.ChucVu.ReadOnly = true;
-            this.ChucVu.Width = 125;
             // 
             // frmHoSoNV
             // 
