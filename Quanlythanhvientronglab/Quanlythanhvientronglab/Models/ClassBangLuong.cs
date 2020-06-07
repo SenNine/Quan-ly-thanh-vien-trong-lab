@@ -11,7 +11,7 @@ namespace Quanlythanhvientronglab.Models
     [Table("BangLuong")]
     public class ClassBangLuong
     {
-        public ClassHoSoNV hoso { set; get; }
+        public ClassNhanVien hoso { set; get; }
         [Key]
         [Column(Order =10)]
         public string MaNV { set; get; }

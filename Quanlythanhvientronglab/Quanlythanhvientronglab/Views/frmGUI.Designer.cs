@@ -33,7 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_thannhan = new System.Windows.Forms.Button();
+            this.btn_congviec = new System.Windows.Forms.Button();
             this.btn_bangcong = new System.Windows.Forms.Button();
             this.btn_chucvu = new System.Windows.Forms.Button();
             this.btn_phancong = new System.Windows.Forms.Button();
@@ -42,13 +42,13 @@
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tìmKiếmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.troGiupToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinBảnQuyềnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_luong = new System.Windows.Forms.Button();
             this.btn_duan = new System.Windows.Forms.Button();
             this.btn_hosonv = new System.Windows.Forms.Button();
-            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -97,7 +97,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btn_thannhan);
+            this.groupBox1.Controls.Add(this.btn_congviec);
             this.groupBox1.Controls.Add(this.btn_bangcong);
             this.groupBox1.Controls.Add(this.btn_chucvu);
             this.groupBox1.Controls.Add(this.btn_phancong);
@@ -108,16 +108,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CHI TIẾT";
             // 
-            // btn_thannhan
+            // btn_congviec
             // 
-            this.btn_thannhan.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.btn_thannhan.Location = new System.Drawing.Point(40, 272);
-            this.btn_thannhan.Name = "btn_thannhan";
-            this.btn_thannhan.Size = new System.Drawing.Size(109, 29);
-            this.btn_thannhan.TabIndex = 0;
-            this.btn_thannhan.Text = "Thân nhân";
-            this.btn_thannhan.UseVisualStyleBackColor = true;
-            this.btn_thannhan.Click += new System.EventHandler(this.btn_thannhan_Click);
+            this.btn_congviec.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.btn_congviec.Location = new System.Drawing.Point(40, 272);
+            this.btn_congviec.Name = "btn_congviec";
+            this.btn_congviec.Size = new System.Drawing.Size(109, 29);
+            this.btn_congviec.TabIndex = 0;
+            this.btn_congviec.Text = "Công việc";
+            this.btn_congviec.UseVisualStyleBackColor = true;
+            this.btn_congviec.Click += new System.EventHandler(this.btn_thannhan_Click);
             // 
             // btn_bangcong
             // 
@@ -178,20 +178,27 @@
             // exportToolStripMenuItem
             // 
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
             this.exportToolStripMenuItem.Text = "Export";
             // 
             // tìmKiếmToolStripMenuItem
             // 
             this.tìmKiếmToolStripMenuItem.Name = "tìmKiếmToolStripMenuItem";
-            this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
             this.tìmKiếmToolStripMenuItem.Text = "Tìm kiếm";
             // 
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
             this.thoátToolStripMenuItem.Text = "Thoát";
+            // 
+            // testToolStripMenuItem
+            // 
+            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
+            this.testToolStripMenuItem.Text = "Test";
+            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
             // 
             // troGiupToolStrip
             // 
@@ -250,13 +257,6 @@
             this.btn_hosonv.UseVisualStyleBackColor = true;
             this.btn_hosonv.Click += new System.EventHandler(this.btn_hosonv_Click);
             // 
-            // testToolStripMenuItem
-            // 
-            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.testToolStripMenuItem.Text = "Test";
-            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
-            // 
             // frmGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -293,7 +293,7 @@
         private System.Windows.Forms.Button btn_duan;
         private System.Windows.Forms.Button btn_hosonv;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btn_thannhan;
+        private System.Windows.Forms.Button btn_congviec;
         private System.Windows.Forms.Button btn_bangcong;
         private System.Windows.Forms.Button btn_chucvu;
         private System.Windows.Forms.Button btn_phancong;

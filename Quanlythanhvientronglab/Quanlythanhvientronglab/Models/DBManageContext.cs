@@ -11,11 +11,51 @@ namespace Quanlythanhvientronglab.Models
     {
         public DBManageContext() : base("name=DBManageMembers") { }
         public DbSet<ClassChucVu> tbChucVu { set; get; }
-        public DbSet<ClassHoSoNV> tbHoSoNV { set; get; }
+        public DbSet<ClassNhanVien> tbNhanVien { set; get; }
         public DbSet<ClassDuAn> tbDuAn { set; get; }
-        public DbSet<ClassPhanCong> tbPhanCong { set; get; }
-        public DbSet<ClassBangCong> tbBangCong { set; get; }
+        public DbSet<ClassCongViec> tbCongViec { set; get; }        
         public DbSet<ClassBangLuong> tbBangLuong { set; get; }
-        public DbSet<ClassThanNhan> tbThanNhan { set; get; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            //modelBuilder.Entity<ClassTask>()
+            //    .HasMany<ClassUser>(s => s.listUser)
+            //    .WithMany(c => c.listTasks)
+            //    .Map(cs =>
+            //    {
+            //        cs.MapLeftKey("TaskRefId");
+            //        cs.MapRightKey("UserRefId");
+            //        cs.ToTable("TaskUser");
+            //    });
+
+            modelBuilder.Entity<ClassDuAn>()
+                .HasMany<ClassCongViec>(s => s.listCV)
+                .WithMany(c => c.listDA)
+                .Map(cs =>
+                {
+                    cs.MapLeftKey("DuAnRefId");
+                    cs.MapRightKey("CongViecRefId");
+                    cs.ToTable("DuAnCongViec");
+                });
+            modelBuilder.Entity<ClassNhanVien>()
+                .HasMany<ClassCongViec>(s => s.listCVLam)
+                .WithMany(c => c.listNVLam)
+                .Map(cs =>
+                {
+                    cs.MapLeftKey("NhanVienRefId");
+                    cs.MapRightKey("CongViecLamRefId");
+                    cs.ToTable("NhanVienCongViecLam");
+                });
+
+            modelBuilder.Entity<ClassNhanVien>()
+                .HasMany<ClassCongViec>(s => s.listCVXong)
+                .WithMany(c => c.listNVXong)
+                .Map(cs =>
+                {
+                    cs.MapLeftKey("NhanVienRefId");
+                    cs.MapRightKey("CongViecGiaoRefId");
+                    cs.ToTable("NhanVienCongViecGiao");
+                });
+        }
     }
 }

@@ -11,11 +11,16 @@ namespace Quanlythanhvientronglab.Models
     [Table("DuAn")]
     public class ClassDuAn
     {
+        public ClassDuAn()
+        {
+            this.listCV = new HashSet<ClassCongViec>();
+        }
         [Key]
         public string MaDA { set; get; }
         public string TenDA { set; get; }
-        public string ThongTinDA { set; get; }
-        public string TienDo { set; get; }
-        public string CongViec { set; get; }
+        public string ChiTiet { set; get; }
+        public DateTime fromDate { set; get; }
+        public DateTime toDate { set; get; }        
+        public virtual ICollection<ClassCongViec> listCV { set; get; }
     }
 }

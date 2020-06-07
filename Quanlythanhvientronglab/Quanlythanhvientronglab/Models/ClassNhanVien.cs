@@ -9,20 +9,24 @@ using System.Threading.Tasks;
 namespace Quanlythanhvientronglab.Models
 {
     [Table("HoSoNV")]
-    public class ClassHoSoNV
+    public class ClassNhanVien
     {
+        public ClassNhanVien()
+        {
+            this.listCVLam = new HashSet<ClassCongViec>();
+            this.listCVXong = new HashSet<ClassCongViec>();
+        }
         [Key]
         [Column(Order =10)]
-        public string MaNV { set; get; }
-        [Key]
-        [Column(Order = 20)]
+        public string MaNV { set; get; }        
         public string TenNV { set; get; }
         public string NgaySinh { set; get; }
         public string GioiTinh { set; get; }
-        public string TonGiao { set; get; }
         public string SDT { set; get; }
         public string Email { set; get; }        
         public string MaChucVu { set; get; }
         public ClassChucVu ChucVu { set; get; }
+        public virtual ICollection<ClassCongViec> listCVLam { set; get; }
+        public virtual ICollection<ClassCongViec> listCVXong { set; get; }
     }
 }
