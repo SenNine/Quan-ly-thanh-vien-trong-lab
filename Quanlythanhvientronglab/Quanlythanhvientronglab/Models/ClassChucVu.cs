@@ -14,6 +14,9 @@ namespace Quanlythanhvientronglab.Models
         [Key]        
         public string MaChucVu { set; get; }        
         public string TenChucVu { set; get; }
-        
+        public override string ToString()
+        {
+            return MaChucVu;
+        }
     }
 }

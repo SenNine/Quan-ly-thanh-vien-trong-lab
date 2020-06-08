@@ -28,23 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.editbtn = new System.Windows.Forms.Button();
+            this.delbtn = new System.Windows.Forms.Button();
+            this.addbtn = new System.Windows.Forms.Button();
+            this.cbbChucVu = new System.Windows.Forms.ComboBox();
+            this.checkFemale = new System.Windows.Forms.CheckBox();
+            this.checkMale = new System.Windows.Forms.CheckBox();
             this.txtTenNv = new System.Windows.Forms.TextBox();
-            this.dateTimeNgaysinh = new System.Windows.Forms.DateTimePicker();
+            this.Ngaysinhpicker = new System.Windows.Forms.DateTimePicker();
             this.cbbhoten = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtemail = new System.Windows.Forms.TextBox();
+            this.txtsdt = new System.Windows.Forms.TextBox();
+            this.txtDiachi = new System.Windows.Forms.TextBox();
             this.txtmanv = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,7 +56,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataNV = new System.Windows.Forms.DataGridView();
             this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,23 +65,41 @@
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider6 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider7 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider8 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider9 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataNV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider9)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.cbbChucVu);
+            this.groupBox1.Controls.Add(this.checkFemale);
+            this.groupBox1.Controls.Add(this.checkMale);
             this.groupBox1.Controls.Add(this.txtTenNv);
-            this.groupBox1.Controls.Add(this.dateTimeNgaysinh);
+            this.groupBox1.Controls.Add(this.Ngaysinhpicker);
             this.groupBox1.Controls.Add(this.cbbhoten);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtemail);
+            this.groupBox1.Controls.Add(this.txtsdt);
+            this.groupBox1.Controls.Add(this.txtDiachi);
             this.groupBox1.Controls.Add(this.txtmanv);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label8);
@@ -104,9 +123,9 @@
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.editbtn);
+            this.groupBox2.Controls.Add(this.delbtn);
+            this.groupBox2.Controls.Add(this.addbtn);
             this.groupBox2.Location = new System.Drawing.Point(646, 206);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(424, 141);
@@ -141,65 +160,69 @@
             this.label11.TabIndex = 1;
             this.label11.Text = "Lưu";
             // 
-            // button3
+            // editbtn
             // 
-            this.button3.BackgroundImage = global::Quanlythanhvientronglab.Properties.Resources.edit;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(294, 40);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(62, 55);
-            this.button3.TabIndex = 0;
-            this.button3.UseVisualStyleBackColor = true;
+            this.editbtn.BackgroundImage = global::Quanlythanhvientronglab.Properties.Resources.edit;
+            this.editbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.editbtn.Location = new System.Drawing.Point(294, 40);
+            this.editbtn.Name = "editbtn";
+            this.editbtn.Size = new System.Drawing.Size(62, 55);
+            this.editbtn.TabIndex = 0;
+            this.editbtn.UseVisualStyleBackColor = true;
+            this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
             // 
-            // button2
+            // delbtn
             // 
-            this.button2.BackgroundImage = global::Quanlythanhvientronglab.Properties.Resources.xoa;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(194, 40);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(62, 55);
-            this.button2.TabIndex = 0;
-            this.button2.UseVisualStyleBackColor = true;
+            this.delbtn.BackgroundImage = global::Quanlythanhvientronglab.Properties.Resources.xoa;
+            this.delbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.delbtn.Location = new System.Drawing.Point(194, 40);
+            this.delbtn.Name = "delbtn";
+            this.delbtn.Size = new System.Drawing.Size(62, 55);
+            this.delbtn.TabIndex = 0;
+            this.delbtn.UseVisualStyleBackColor = true;
+            this.delbtn.Click += new System.EventHandler(this.delbtn_Click);
             // 
-            // button1
+            // addbtn
             // 
-            this.button1.BackgroundImage = global::Quanlythanhvientronglab.Properties.Resources.save;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(99, 40);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(62, 55);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
+            this.addbtn.BackgroundImage = global::Quanlythanhvientronglab.Properties.Resources.save;
+            this.addbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.addbtn.Location = new System.Drawing.Point(99, 40);
+            this.addbtn.Name = "addbtn";
+            this.addbtn.Size = new System.Drawing.Size(62, 55);
+            this.addbtn.TabIndex = 0;
+            this.addbtn.UseVisualStyleBackColor = true;
+            this.addbtn.Click += new System.EventHandler(this.addbtn_Click);
             // 
-            // comboBox1
+            // cbbChucVu
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(768, 151);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(235, 30);
-            this.comboBox1.TabIndex = 81;
+            this.cbbChucVu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbChucVu.FormattingEnabled = true;
+            this.cbbChucVu.Location = new System.Drawing.Point(768, 151);
+            this.cbbChucVu.Name = "cbbChucVu";
+            this.cbbChucVu.Size = new System.Drawing.Size(235, 30);
+            this.cbbChucVu.TabIndex = 81;
             // 
-            // checkBox2
+            // checkFemale
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(360, 192);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(57, 28);
-            this.checkBox2.TabIndex = 80;
-            this.checkBox2.Text = "Nữ";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkFemale.AutoSize = true;
+            this.checkFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkFemale.Location = new System.Drawing.Point(360, 192);
+            this.checkFemale.Name = "checkFemale";
+            this.checkFemale.Size = new System.Drawing.Size(57, 28);
+            this.checkFemale.TabIndex = 80;
+            this.checkFemale.Text = "Nữ";
+            this.checkFemale.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // checkMale
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(257, 192);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(72, 28);
-            this.checkBox1.TabIndex = 80;
-            this.checkBox1.Text = "Nam";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkMale.AutoSize = true;
+            this.checkMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkMale.Location = new System.Drawing.Point(257, 192);
+            this.checkMale.Name = "checkMale";
+            this.checkMale.Size = new System.Drawing.Size(72, 28);
+            this.checkMale.TabIndex = 80;
+            this.checkMale.Text = "Nam";
+            this.checkMale.UseVisualStyleBackColor = true;
             // 
             // txtTenNv
             // 
@@ -209,16 +232,16 @@
             this.txtTenNv.Size = new System.Drawing.Size(235, 28);
             this.txtTenNv.TabIndex = 79;
             // 
-            // dateTimeNgaysinh
+            // Ngaysinhpicker
             // 
-            this.dateTimeNgaysinh.CustomFormat = "dd/MM/yyyy";
-            this.dateTimeNgaysinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeNgaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimeNgaysinh.Location = new System.Drawing.Point(257, 140);
-            this.dateTimeNgaysinh.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimeNgaysinh.Name = "dateTimeNgaysinh";
-            this.dateTimeNgaysinh.Size = new System.Drawing.Size(235, 28);
-            this.dateTimeNgaysinh.TabIndex = 78;
+            this.Ngaysinhpicker.CustomFormat = "dd/MM/yyyy";
+            this.Ngaysinhpicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ngaysinhpicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Ngaysinhpicker.Location = new System.Drawing.Point(257, 140);
+            this.Ngaysinhpicker.Margin = new System.Windows.Forms.Padding(4);
+            this.Ngaysinhpicker.Name = "Ngaysinhpicker";
+            this.Ngaysinhpicker.Size = new System.Drawing.Size(235, 28);
+            this.Ngaysinhpicker.TabIndex = 78;
             // 
             // cbbhoten
             // 
@@ -229,32 +252,33 @@
             this.cbbhoten.Size = new System.Drawing.Size(235, 30);
             this.cbbhoten.TabIndex = 77;
             // 
-            // textBox4
+            // txtemail
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(768, 95);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(235, 28);
-            this.textBox4.TabIndex = 76;
+            this.txtemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtemail.Location = new System.Drawing.Point(768, 95);
+            this.txtemail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.Size = new System.Drawing.Size(235, 28);
+            this.txtemail.TabIndex = 76;
+            this.txtemail.Text = "@gmail.com";
             // 
-            // textBox3
+            // txtsdt
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(768, 51);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(235, 28);
-            this.textBox3.TabIndex = 76;
+            this.txtsdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsdt.Location = new System.Drawing.Point(768, 51);
+            this.txtsdt.Margin = new System.Windows.Forms.Padding(4);
+            this.txtsdt.Name = "txtsdt";
+            this.txtsdt.Size = new System.Drawing.Size(235, 28);
+            this.txtsdt.TabIndex = 76;
             // 
-            // textBox2
+            // txtDiachi
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(257, 251);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(235, 28);
-            this.textBox2.TabIndex = 76;
+            this.txtDiachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiachi.Location = new System.Drawing.Point(257, 251);
+            this.txtDiachi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDiachi.Name = "txtDiachi";
+            this.txtDiachi.Size = new System.Drawing.Size(235, 28);
+            this.txtDiachi.TabIndex = 76;
             // 
             // txtmanv
             // 
@@ -364,12 +388,12 @@
             this.label1.TabIndex = 73;
             this.label1.Text = "Mã Nhân Viên";
             // 
-            // dataGridView1
+            // dataNV
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataNV.AllowUserToAddRows = false;
+            this.dataNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataNV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaNV,
             this.HoTen,
             this.NgaySinh,
@@ -378,17 +402,19 @@
             this.SDT,
             this.Email,
             this.MaChucVu});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 366);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1182, 387);
-            this.dataGridView1.TabIndex = 1;
+            this.dataNV.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataNV.Location = new System.Drawing.Point(0, 366);
+            this.dataNV.Name = "dataNV";
+            this.dataNV.ReadOnly = true;
+            this.dataNV.RowHeadersWidth = 51;
+            this.dataNV.RowTemplate.Height = 24;
+            this.dataNV.Size = new System.Drawing.Size(1182, 387);
+            this.dataNV.TabIndex = 1;
+            this.dataNV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataNV_CellClick);
             // 
             // MaNV
             // 
+            this.MaNV.DataPropertyName = "MaNV";
             this.MaNV.HeaderText = "Mã Nhân Viên";
             this.MaNV.MinimumWidth = 6;
             this.MaNV.Name = "MaNV";
@@ -396,6 +422,7 @@
             // 
             // HoTen
             // 
+            this.HoTen.DataPropertyName = "TenNV";
             this.HoTen.HeaderText = "Họ Tên";
             this.HoTen.MinimumWidth = 6;
             this.HoTen.Name = "HoTen";
@@ -403,6 +430,7 @@
             // 
             // NgaySinh
             // 
+            this.NgaySinh.DataPropertyName = "NgaySinh";
             this.NgaySinh.HeaderText = "Ngày Sinh";
             this.NgaySinh.MinimumWidth = 6;
             this.NgaySinh.Name = "NgaySinh";
@@ -410,6 +438,7 @@
             // 
             // GioiTinh
             // 
+            this.GioiTinh.DataPropertyName = "GioiTinh";
             this.GioiTinh.HeaderText = "Giới Tính";
             this.GioiTinh.MinimumWidth = 6;
             this.GioiTinh.Name = "GioiTinh";
@@ -417,6 +446,7 @@
             // 
             // DiaChi
             // 
+            this.DiaChi.DataPropertyName = "DiaChi";
             this.DiaChi.HeaderText = "Địa Chỉ";
             this.DiaChi.MinimumWidth = 6;
             this.DiaChi.Name = "DiaChi";
@@ -424,6 +454,7 @@
             // 
             // SDT
             // 
+            this.SDT.DataPropertyName = "SDT";
             this.SDT.HeaderText = "Số ĐT";
             this.SDT.MinimumWidth = 6;
             this.SDT.Name = "SDT";
@@ -431,6 +462,7 @@
             // 
             // Email
             // 
+            this.Email.DataPropertyName = "Email";
             this.Email.HeaderText = "Email";
             this.Email.MinimumWidth = 6;
             this.Email.Name = "Email";
@@ -438,17 +470,54 @@
             // 
             // MaChucVu
             // 
+            this.MaChucVu.DataPropertyName = "MaChucVu";
             this.MaChucVu.HeaderText = "Chức Vụ";
             this.MaChucVu.MinimumWidth = 6;
             this.MaChucVu.Name = "MaChucVu";
             this.MaChucVu.ReadOnly = true;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.ContainerControl = this;
+            // 
+            // errorProvider4
+            // 
+            this.errorProvider4.ContainerControl = this;
+            // 
+            // errorProvider5
+            // 
+            this.errorProvider5.ContainerControl = this;
+            // 
+            // errorProvider6
+            // 
+            this.errorProvider6.ContainerControl = this;
+            // 
+            // errorProvider7
+            // 
+            this.errorProvider7.ContainerControl = this;
+            // 
+            // errorProvider8
+            // 
+            this.errorProvider8.ContainerControl = this;
+            // 
+            // errorProvider9
+            // 
+            this.errorProvider9.ContainerControl = this;
             // 
             // frmHoSoNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1182, 753);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataNV);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmHoSoNV";
             this.Text = "frmHoSoNV";
@@ -456,7 +525,16 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataNV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider9)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -465,16 +543,16 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button addbtn;
+        private System.Windows.Forms.ComboBox cbbChucVu;
+        private System.Windows.Forms.CheckBox checkFemale;
+        private System.Windows.Forms.CheckBox checkMale;
         private System.Windows.Forms.TextBox txtTenNv;
-        private System.Windows.Forms.DateTimePicker dateTimeNgaysinh;
+        private System.Windows.Forms.DateTimePicker Ngaysinhpicker;
         private System.Windows.Forms.ComboBox cbbhoten;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtemail;
+        private System.Windows.Forms.TextBox txtsdt;
+        private System.Windows.Forms.TextBox txtDiachi;
         private System.Windows.Forms.TextBox txtmanv;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
@@ -486,11 +564,20 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button delbtn;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button editbtn;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataNV;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
+        private System.Windows.Forms.ErrorProvider errorProvider4;
+        private System.Windows.Forms.ErrorProvider errorProvider5;
+        private System.Windows.Forms.ErrorProvider errorProvider6;
+        private System.Windows.Forms.ErrorProvider errorProvider7;
+        private System.Windows.Forms.ErrorProvider errorProvider8;
+        private System.Windows.Forms.ErrorProvider errorProvider9;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;

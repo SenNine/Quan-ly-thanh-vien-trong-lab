@@ -60,6 +60,7 @@
     <Compile Include="Controllers\ChucVuController.cs" />
     <Compile Include="Controllers\CongViecController.cs" />
     <Compile Include="Controllers\DAController.cs" />
+    <Compile Include="Controllers\NhanVienController.cs" />
     <Compile Include="Models\ClassBangLuong.cs" />
     <Compile Include="Models\ClassChucVu.cs" />
     <Compile Include="Models\ClassCongViec.cs" />

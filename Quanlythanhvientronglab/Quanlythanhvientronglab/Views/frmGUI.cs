@@ -20,7 +20,8 @@ namespace Quanlythanhvientronglab.Views
 
         private void btn_hosonv_Click(object sender, EventArgs e)
         {
-            
+            frmHoSoNV fnv = new frmHoSoNV();
+            fnv.Show();
         }
 
         private void btn_duan_Click(object sender, EventArgs e)

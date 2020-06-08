@@ -20,12 +20,12 @@ namespace Quanlythanhvientronglab.Models
         [Column(Order =10)]
         public string MaNV { set; get; }        
         public string TenNV { set; get; }
-        public string NgaySinh { set; get; }
+        public DateTime NgaySinh { set; get; }
         public string GioiTinh { set; get; }
         public string SDT { set; get; }
-        public string Email { set; get; }        
-        public string MaChucVu { set; get; }
-        public ClassChucVu ChucVu { set; get; }
+        public string Email { set; get; }   
+        public string DiaChi { set; get; }       
+        public string MaChucVu { set; get; }       
         public virtual ICollection<ClassCongViec> listCVLam { set; get; }
         public virtual ICollection<ClassCongViec> listCVXong { set; get; }
     }
