@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ChucVuController.cs" />
     <Compile Include="Controllers\CongViecController.cs" />
     <Compile Include="Controllers\DAController.cs" />
     <Compile Include="Models\ClassBangLuong.cs" />

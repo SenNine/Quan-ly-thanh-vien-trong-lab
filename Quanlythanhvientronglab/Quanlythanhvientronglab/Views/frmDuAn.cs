@@ -15,7 +15,8 @@ namespace Quanlythanhvientronglab.Views
     public partial class frmDuAn : Form
     {
         List<ClassCongViec> searchcv;
-        
+        string selectedMaDA;
+        string[] arrlstCVfirst;
         public frmDuAn()
         {
             InitializeComponent();
@@ -70,18 +71,23 @@ namespace Quanlythanhvientronglab.Views
             this.txtMaDA.Clear();
             this.txtTenDA.Clear();
             this.txtChitiet.Clear();
-            errorProvider1.Clear();
-            errorProvider2.Clear();
-            errorProvider3.Clear();
-            errorProvider4.Clear();
+            this.errorProvider1.Clear();
+            this.errorProvider2.Clear();
+            this.errorProvider3.Clear();
+            this.errorProvider4.Clear();
             this.listCongViec.Items.Clear();
             this.listSearch.Items.Clear();
+            this.txtSearch.Clear();
             this.fromDatePicker.Value = DateTime.Now;
             this.toDatePicker.Value = DateTime.Now;
         }
         private void addbt_Click(object sender, EventArgs e)
         {
+            //Kiem tra MaDA da ton tai hay khong
+            if (DAController.GetDuAn(txtMaDA.Text.Trim()) != null)
+                return;
 
+            //kiem tra hop le
             bool check = false;
             if (KiemTra(check) == true)
                 return;
@@ -117,13 +123,15 @@ namespace Quanlythanhvientronglab.Views
                 }
             }
 
-
+            
+            //them vao csdl
             if(DAController.AddDuAn(da)==false)
             {
                 MessageBox.Show("Loi khi them du an","Loi" , MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
+            //hien thi du lieu
             ShowData();
 
             ClearControls();
@@ -144,6 +152,7 @@ namespace Quanlythanhvientronglab.Views
                 this.listSearch.Visible = false;
             }
 
+            //hien thi cac cong viec chua thuoc du an 
             foreach (var x in searchcv)
             {
                 if(x.listDA.Count==0)
@@ -186,17 +195,20 @@ namespace Quanlythanhvientronglab.Views
             {
                 this.listCongViec.Items.Clear();
                 this.listSearch.Items.Clear();
-                
+
+                //MaDA dang chon
+                selectedMaDA = this.listViewda.SelectedItems[0].SubItems[0].Text.Trim();
 
                 //hien thi len textbox
-                this.txtMaDA.Text= this.listViewda.SelectedItems[0].SubItems[0].Text.Trim();
+                this.txtMaDA.Text= this.listViewda.SelectedItems[0].SubItems[0].Text.Trim();               
                 this.txtTenDA.Text = this.listViewda.SelectedItems[0].SubItems[1].Text.Trim();
                 this.txtChitiet.Text = this.listViewda.SelectedItems[0].SubItems[2].Text.Trim();
                 this.fromDatePicker.Value = DateTime.Parse(this.listViewda.SelectedItems[0].SubItems[3].Text.Trim());
                 this.toDatePicker.Value = DateTime.Parse(this.listViewda.SelectedItems[0].SubItems[4].Text.Trim());
 
-                string[] arr = this.listViewda.SelectedItems[0].SubItems[5].Text.Trim().Split();
-                foreach(var i in arr)
+                string[] arrCV = this.listViewda.SelectedItems[0].SubItems[5].Text.Trim().Split();
+                arrlstCVfirst = arrCV;
+                foreach(var i in arrCV)
                     foreach(var j in CongViecController.GetListCV())
                     {
                         if (i == j.MaCV)
@@ -211,7 +223,7 @@ namespace Quanlythanhvientronglab.Views
             bool check = false;
             if (KiemTra(check) == true)
                 return;
-
+            
             ClassDuAn da = new ClassDuAn();
             da.MaDA = txtMaDA.Text.Trim();
             da.TenDA = txtTenDA.Text.Trim();
@@ -226,21 +238,43 @@ namespace Quanlythanhvientronglab.Views
                 da.listCV.Add(CongViecController.GetCV(this.listCongViec.Items[i].ToString()));
             }
 
-            //Kiem tra congviec thuoc du an khac hay khong
-            List<ClassCongViec> congViecs = new List<ClassCongViec>();
-            foreach (var i in CongViecController.GetListCV())
+            //Kiem tra congviec thuoc du an khac hay khong khi ADD
+            if(selectedMaDA!=this.txtMaDA.Text.Trim())
             {
-                if (i.listDA.Count != 0)
-                    congViecs.Add(i);
-            }
-            foreach (var j in congViecs)
-            {
-                foreach (var z in da.listCV)
+                List<ClassCongViec> congViecs = new List<ClassCongViec>();
+                foreach (var i in CongViecController.GetListCV())
                 {
-                    if (j.MaCV == z.MaCV)
-                        return;
+                    if (i.listDA.Count != 0)
+                        congViecs.Add(i);
+                }
+                foreach (var j in congViecs)
+                {
+                    foreach (var z in da.listCV)
+                    {
+                        if (j.MaCV == z.MaCV)
+                        {
+                            MessageBox.Show("Cong viec da thuoc du an khac", "Loi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                            
+                    }
                 }
             }
+
+            //kiem tra cong viec thuoc du an khac hay khong Update
+            //foreach(var i in da.listCV)
+            //{
+            //    if(i.listDA.Count!=0)
+            //        foreach(var j in i.listDA)
+            //        {
+            //            if (j.MaDA != da.MaDA)
+            //            {
+            //                MessageBox.Show("Cong viec da thuoc du an khac", "Loi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //                return;
+            //            }
+                            
+            //        }               
+            //}
 
             if (DAController.UpdateDA(da)==false)
             {

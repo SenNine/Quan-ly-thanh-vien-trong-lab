@@ -36,7 +36,8 @@ namespace Quanlythanhvientronglab.Views
 
         private void btn_chucvu_Click(object sender, EventArgs e)
         {
-            
+            frmChucVu fcvu = new frmChucVu();
+            fcvu.Show();
         }
 
         private void btn_phancong_Click(object sender, EventArgs e)

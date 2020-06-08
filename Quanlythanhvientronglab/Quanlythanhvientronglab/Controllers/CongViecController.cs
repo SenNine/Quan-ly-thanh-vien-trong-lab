@@ -51,7 +51,7 @@ namespace Quanlythanhvientronglab.Controllers
         {
             using (var _context = new DBManageContext())
             {
-                var cv = (from d in _context.tbCongViec
+                var cv = (from d in _context.tbCongViec.Include("listDA")
                           where MaCV == d.MaCV
                           select d).ToList();
                 if (cv.Count == 1)

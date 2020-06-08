@@ -59,7 +59,7 @@ namespace Quanlythanhvientronglab.Views
 
             if (CongViecController.AddCV(congviec) == false)
             {
-                MessageBox.Show("Loi", "Loi khi them cong viec", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Loi khi them cong viec", "Loi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -76,6 +76,7 @@ namespace Quanlythanhvientronglab.Views
 
         private void dataCongViec_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            //lay du lieu tu datagridview hien thi len textbox
             this.txtMacv.Text = dataCongViec.CurrentRow.Cells[0].Value.ToString();
             this.txtTencv.Text = dataCongViec.CurrentRow.Cells[1].Value.ToString();
             this.txtChitiet.Text = dataCongViec.CurrentRow.Cells[2].Value.ToString();
@@ -83,12 +84,15 @@ namespace Quanlythanhvientronglab.Views
 
         private void delbt_Click(object sender, EventArgs e)
         {
-            if (dataCongViec.SelectedRows.Count <= 0) return;
+            //Kiem tra user co chon hang de xoa khong ?
+            if (dataCongViec.SelectedRows.Count <= 0) 
+                return;
 
             ClassCongViec cv = CongViecController.GetCV(this.txtMacv.Text.Trim());
+            //Xoa cong viec
             if(CongViecController.DeleteCV(cv)==false)
             {
-                MessageBox.Show("Loi", "Loi khi xoa cong viec", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Loi khi xoa cong viec", "Loi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             ShowData();
@@ -107,10 +111,17 @@ namespace Quanlythanhvientronglab.Views
 
             if(CongViecController.UpdateCV(congviec)==false)
             {
-                MessageBox.Show("Loi", "Loi khi sua cong viec", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Loi khi sua cong viec", "Loi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             ShowData();
+
+            this.txtChitiet.Clear();
+            this.txtMacv.Clear();
+            this.txtTencv.Clear();
+            this.errorProvider1.Clear();
+            this.errorProvider2.Clear();
+            this.errorProvider3.Clear();
         }
     }
 }
