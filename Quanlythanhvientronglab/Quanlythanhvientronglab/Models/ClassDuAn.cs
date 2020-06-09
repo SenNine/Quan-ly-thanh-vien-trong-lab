@@ -22,5 +22,9 @@ namespace Quanlythanhvientronglab.Models
         public DateTime fromDate { set; get; }
         public DateTime toDate { set; get; }        
         public virtual ICollection<ClassCongViec> listCV { set; get; }
+        public override string ToString()
+        {
+            return MaDA;
+        }
     }
 }

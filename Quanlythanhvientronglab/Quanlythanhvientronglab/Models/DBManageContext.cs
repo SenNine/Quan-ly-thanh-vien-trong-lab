@@ -14,7 +14,7 @@ namespace Quanlythanhvientronglab.Models
         public DbSet<ClassNhanVien> tbNhanVien { set; get; }
         public DbSet<ClassDuAn> tbDuAn { set; get; }
         public DbSet<ClassCongViec> tbCongViec { set; get; }        
-        public DbSet<ClassBangLuong> tbBangLuong { set; get; }
+        
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

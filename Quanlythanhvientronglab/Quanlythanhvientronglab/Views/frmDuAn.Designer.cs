@@ -364,6 +364,7 @@
             this.toDate,
             this.listCV});
             this.listViewda.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.listViewda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.listViewda.GridLines = true;
             this.listViewda.HideSelection = false;
             this.listViewda.Location = new System.Drawing.Point(0, 340);

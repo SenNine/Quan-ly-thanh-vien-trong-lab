@@ -43,7 +43,8 @@ namespace Quanlythanhvientronglab.Views
 
         private void btn_phancong_Click(object sender, EventArgs e)
         {
-           
+            frmPhanCong fpc = new frmPhanCong();
+            fpc.Show();
         }
 
         private void btn_bangcong_Click(object sender, EventArgs e)

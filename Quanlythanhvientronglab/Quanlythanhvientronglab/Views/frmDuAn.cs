@@ -255,8 +255,7 @@ namespace Quanlythanhvientronglab.Views
                         {
                             MessageBox.Show("Cong viec da thuoc du an khac", "Loi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
-                        }
-                            
+                        }                            
                     }
                 }
             }

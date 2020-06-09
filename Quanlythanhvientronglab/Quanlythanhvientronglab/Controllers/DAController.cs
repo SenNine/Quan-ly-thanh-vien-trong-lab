@@ -56,7 +56,7 @@ namespace Quanlythanhvientronglab.Controllers
         {
             using(var _context=new DBManageContext())
             {
-                var da = (from d in _context.tbDuAn
+                var da = (from d in _context.tbDuAn.Include("listCV")
                           where MaDa == d.MaDA
                           select d).ToList();
                 if (da.Count == 1)
@@ -99,13 +99,14 @@ namespace Quanlythanhvientronglab.Controllers
         {
             try
             {
-                using (var _context = new DBManageContext())
-                {
-                    //update duan voi listcongviec rong
+                //using (var _context = new DBManageContext())
+                //{
+                //    //update duan voi listcongviec rong
+                //    ClassDuAn duan = new ClassDuAn { MaDA = da.MaDA, TenDA = da.TenDA, ChiTiet = da.ChiTiet, fromDate = da.fromDate, toDate = da.toDate };
+                //    _context.tbDuAn.AddOrUpdate(duan);
+                //    _context.SaveChanges();
                     
-                    _context.tbDuAn.AddOrUpdate(da);
-                    _context.SaveChanges();
-                }
+                //}
                 using (var _context = new DBManageContext())
                 {
                     //lay du an
@@ -113,6 +114,11 @@ namespace Quanlythanhvientronglab.Controllers
                                 where proj.MaDA == da.MaDA
                                 select proj).Single();
 
+                    foreach (ClassCongViec cv in dbda.listCV.ToList())
+                    {
+                        dbda.listCV.Remove(cv);
+                    }
+                    
                     foreach (ClassCongViec cv in da.listCV)
                     {
                         //lay congviec tu sql
@@ -127,8 +133,9 @@ namespace Quanlythanhvientronglab.Controllers
                     return true;
                 }
             }
-            catch
+            catch(Exception e)
             {
+                System.Windows.MessageBox.Show(e.Message);
                 return false;
             }
         }

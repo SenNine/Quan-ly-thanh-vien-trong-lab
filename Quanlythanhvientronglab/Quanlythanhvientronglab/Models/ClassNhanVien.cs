@@ -26,7 +26,14 @@ namespace Quanlythanhvientronglab.Models
         public string Email { set; get; }   
         public string DiaChi { set; get; }       
         public string MaChucVu { set; get; }       
+        public int Luong { set; get; }
+        public string TienDo { set; get; }
+        public string MaDA { set; get; }
         public virtual ICollection<ClassCongViec> listCVLam { set; get; }
         public virtual ICollection<ClassCongViec> listCVXong { set; get; }
+        public override string ToString()
+        {
+            return MaNV;
+        }
     }
 }

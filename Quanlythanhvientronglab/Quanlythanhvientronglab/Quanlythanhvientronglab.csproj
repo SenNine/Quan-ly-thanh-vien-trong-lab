@@ -42,10 +42,15 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>D:\Download\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib-master\Guna.UI_WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,7 +66,6 @@
     <Compile Include="Controllers\CongViecController.cs" />
     <Compile Include="Controllers\DAController.cs" />
     <Compile Include="Controllers\NhanVienController.cs" />
-    <Compile Include="Models\ClassBangLuong.cs" />
     <Compile Include="Models\ClassChucVu.cs" />
     <Compile Include="Models\ClassCongViec.cs" />
     <Compile Include="Models\ClassDuAn.cs" />

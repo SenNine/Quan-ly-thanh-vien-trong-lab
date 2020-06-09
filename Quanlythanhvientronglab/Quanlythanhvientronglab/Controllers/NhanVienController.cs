@@ -1,6 +1,7 @@
 ﻿using Quanlythanhvientronglab.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
@@ -14,8 +15,8 @@ namespace Quanlythanhvientronglab.Controllers
         {
             using (var _context = new DBManageContext())
             {
-                var nv = (from n in _context.tbNhanVien
-                          where MaNhanVien == n.MaChucVu
+                var nv = (from n in _context.tbNhanVien.Include("ListCVLam").Include("ListCVXong")
+                          where MaNhanVien == n.MaNV
                           select n).ToList();
                 if (nv.Count == 1)
                     return nv[0];
@@ -37,6 +38,29 @@ namespace Quanlythanhvientronglab.Controllers
             catch
             {
                 return false;
+            }
+        }
+        public static List<ClassNhanVien> GetListNvien()
+        {
+            using (var _context = new DBManageContext())
+            {
+                var nv = (from nvien in _context.tbNhanVien.Include("listCVLam").Include("listCVXong").AsEnumerable()
+                          select new
+                          {
+                              MaNV = nvien.MaNV,
+                              MaDA = nvien.MaDA,
+                              listCVLam = nvien.listCVLam,
+                              listCVXong = nvien.listCVXong,
+                              TienDo = nvien.TienDo
+                          }).Select(x => new ClassNhanVien
+                          {
+                              MaNV = x.MaNV,
+                              MaDA = x.MaDA,
+                              listCVLam = x.listCVLam,
+                              listCVXong = x.listCVXong,
+                              TienDo = x.TienDo
+                          }).ToList();
+                return nv;
             }
         }
         public static List<ClassNhanVien> GetListNV()
@@ -88,13 +112,58 @@ namespace Quanlythanhvientronglab.Controllers
                 return false;
             }
         }
-        public static bool UpdateNV(ClassNhanVien nvien)
+        public static bool UpdateNV(ClassNhanVien nv)
         {
             try
             {
                 using (var _context=new DBManageContext())
                 {
-                    _context.tbNhanVien.AddOrUpdate(nvien);
+                    _context.tbNhanVien.AddOrUpdate(nv);
+                    _context.SaveChanges();
+                    return true;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public static bool UpdateNvien(ClassNhanVien nvien)
+        {
+            try
+            {
+                using (var _context = new DBManageContext())
+                {
+                    var dbnv = (from nv in _context.tbNhanVien.Include("listCVLam").Include("listCVXong")
+                                where nv.MaNV == nvien.MaNV
+                                select nv).Single();
+                    
+                    foreach (var cvgiao in dbnv.listCVLam.ToList())
+                        dbnv.listCVLam.Remove(cvgiao);
+                    foreach (var cvxong in dbnv.listCVXong.ToList())
+                        dbnv.listCVXong.Remove(cvxong);
+
+                    foreach (var permistask in nvien.listCVLam)
+                    {
+                        var dbcv = (from cv in _context.tbCongViec
+                                    where cv.MaCV == permistask.MaCV
+                                    select cv).Single();
+                        dbnv.listCVLam.Add(dbcv);
+                    }
+
+                    foreach (var finistask in nvien.listCVXong)
+                    {
+                        var dbcv = (from cv in _context.tbCongViec
+                                    where cv.MaCV == finistask.MaCV
+                                    select cv).Single();
+                        dbnv.listCVXong.Add(dbcv);
+                    }
+
+                    dbnv.TienDo = dbnv.listCVXong.Count.ToString() + '/' + dbnv.listCVLam.Count.ToString();
+                    dbnv.Luong = 1000000 * dbnv.listCVXong.Count;
+                    dbnv.MaDA = nvien.MaDA;
+
+                    _context.tbNhanVien.AddOrUpdate(dbnv);
                     _context.SaveChanges();
                     return true;
                 }
