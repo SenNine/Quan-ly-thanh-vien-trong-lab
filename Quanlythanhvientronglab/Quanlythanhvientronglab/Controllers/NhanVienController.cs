@@ -40,6 +40,28 @@ namespace Quanlythanhvientronglab.Controllers
                 return false;
             }
         }
+        public static List<ClassNhanVien> GetLuongNV()
+        {
+            using(var _context=new DBManageContext())
+            {
+                var nvien = (from nv in _context.tbNhanVien.AsEnumerable()
+                             select new
+                             {
+                                 MaNV = nv.MaNV,
+                                 TenNV = nv.TenNV,
+                                 TienDo = nv.TienDo,
+                                 Luong = nv.Luong
+                             }).Select(x => new ClassNhanVien
+                             {
+                                 MaNV = x.MaNV,
+                                 TenNV = x.TenNV,
+                                 TienDo = x.TienDo,
+                                 Luong = x.Luong
+                             }).ToList();
+                return nvien;
+                
+            }
+        }
         public static List<ClassNhanVien> GetListNvien()
         {
             using (var _context = new DBManageContext())

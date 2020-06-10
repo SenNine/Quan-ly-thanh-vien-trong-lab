@@ -84,6 +84,8 @@ namespace Quanlythanhvientronglab.Views
             this.dataNV.Columns[9].Visible = false;
             this.dataNV.Columns[8].Visible = false;
             this.dataNV.Columns[10].Visible = false;
+            this.dataNV.Columns[11].Visible = false;
+            this.dataNV.Columns[12].Visible = false;
         }
         private void addbtn_Click(object sender, EventArgs e)
         {

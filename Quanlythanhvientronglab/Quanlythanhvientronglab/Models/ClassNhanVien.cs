@@ -15,6 +15,7 @@ namespace Quanlythanhvientronglab.Models
         {
             this.listCVLam = new HashSet<ClassCongViec>();
             this.listCVXong = new HashSet<ClassCongViec>();
+            this.Luong = 0;
         }
         [Key]
         [Column(Order =10)]

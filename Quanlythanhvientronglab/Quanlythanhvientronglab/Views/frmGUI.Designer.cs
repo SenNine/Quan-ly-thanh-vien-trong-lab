@@ -113,7 +113,7 @@
             this.btn_congviec.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.btn_congviec.Location = new System.Drawing.Point(40, 272);
             this.btn_congviec.Name = "btn_congviec";
-            this.btn_congviec.Size = new System.Drawing.Size(109, 29);
+            this.btn_congviec.Size = new System.Drawing.Size(109, 32);
             this.btn_congviec.TabIndex = 0;
             this.btn_congviec.Text = "Công việc";
             this.btn_congviec.UseVisualStyleBackColor = true;

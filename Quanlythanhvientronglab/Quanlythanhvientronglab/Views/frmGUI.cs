@@ -32,7 +32,8 @@ namespace Quanlythanhvientronglab.Views
 
         private void btn_luong_Click(object sender, EventArgs e)
         {
-            
+            frmBangLuong fluong = new frmBangLuong();
+            fluong.Show();
         }
 
         private void btn_chucvu_Click(object sender, EventArgs e)
