@@ -48,10 +48,7 @@ namespace Quanlythanhvientronglab.Views
             fpc.Show();
         }
 
-        private void btn_bangcong_Click(object sender, EventArgs e)
-        {
-           
-        }
+       
 
         private void btn_thannhan_Click(object sender, EventArgs e)
         {

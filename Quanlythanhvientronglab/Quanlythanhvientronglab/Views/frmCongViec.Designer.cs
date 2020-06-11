@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCongViec));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtChitiet = new System.Windows.Forms.RichTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -44,12 +45,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataCongViec = new System.Windows.Forms.DataGridView();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.MaCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ChiTiet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataCongViec)).BeginInit();
@@ -68,18 +69,21 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(14, 15);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(858, 243);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(965, 304);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Công Việc";
             // 
             // txtChitiet
             // 
-            this.txtChitiet.Location = new System.Drawing.Point(577, 38);
+            this.txtChitiet.Location = new System.Drawing.Point(649, 48);
+            this.txtChitiet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtChitiet.Name = "txtChitiet";
-            this.txtChitiet.Size = new System.Drawing.Size(251, 65);
+            this.txtChitiet.Size = new System.Drawing.Size(282, 80);
             this.txtChitiet.TabIndex = 86;
             this.txtChitiet.Text = "";
             // 
@@ -91,9 +95,11 @@
             this.groupBox2.Controls.Add(this.editbt);
             this.groupBox2.Controls.Add(this.delbt);
             this.groupBox2.Controls.Add(this.addbt);
-            this.groupBox2.Location = new System.Drawing.Point(467, 109);
+            this.groupBox2.Location = new System.Drawing.Point(525, 136);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(367, 124);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Size = new System.Drawing.Size(413, 155);
             this.groupBox2.TabIndex = 85;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
@@ -101,27 +107,27 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(280, 94);
+            this.label13.Location = new System.Drawing.Point(315, 118);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(43, 24);
+            this.label13.Size = new System.Drawing.Size(51, 26);
             this.label13.TabIndex = 1;
             this.label13.Text = "Sửa";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(180, 94);
+            this.label12.Location = new System.Drawing.Point(202, 118);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(45, 24);
+            this.label12.Size = new System.Drawing.Size(51, 26);
             this.label12.TabIndex = 1;
             this.label12.Text = "Xóa";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(86, 94);
+            this.label11.Location = new System.Drawing.Point(97, 118);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(42, 24);
+            this.label11.Size = new System.Drawing.Size(48, 26);
             this.label11.TabIndex = 1;
             this.label11.Text = "Lưu";
             // 
@@ -129,9 +135,10 @@
             // 
             this.editbt.BackgroundImage = global::Quanlythanhvientronglab.Properties.Resources.edit;
             this.editbt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.editbt.Location = new System.Drawing.Point(274, 36);
+            this.editbt.Location = new System.Drawing.Point(308, 45);
+            this.editbt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.editbt.Name = "editbt";
-            this.editbt.Size = new System.Drawing.Size(62, 55);
+            this.editbt.Size = new System.Drawing.Size(70, 69);
             this.editbt.TabIndex = 0;
             this.editbt.UseVisualStyleBackColor = true;
             this.editbt.Click += new System.EventHandler(this.editbt_Click);
@@ -140,9 +147,10 @@
             // 
             this.delbt.BackgroundImage = global::Quanlythanhvientronglab.Properties.Resources.xoa;
             this.delbt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.delbt.Location = new System.Drawing.Point(174, 36);
+            this.delbt.Location = new System.Drawing.Point(196, 45);
+            this.delbt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.delbt.Name = "delbt";
-            this.delbt.Size = new System.Drawing.Size(62, 55);
+            this.delbt.Size = new System.Drawing.Size(70, 69);
             this.delbt.TabIndex = 0;
             this.delbt.UseVisualStyleBackColor = true;
             this.delbt.Click += new System.EventHandler(this.delbt_Click);
@@ -151,9 +159,10 @@
             // 
             this.addbt.BackgroundImage = global::Quanlythanhvientronglab.Properties.Resources.save;
             this.addbt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.addbt.Location = new System.Drawing.Point(79, 36);
+            this.addbt.Location = new System.Drawing.Point(89, 45);
+            this.addbt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addbt.Name = "addbt";
-            this.addbt.Size = new System.Drawing.Size(62, 55);
+            this.addbt.Size = new System.Drawing.Size(70, 69);
             this.addbt.TabIndex = 0;
             this.addbt.UseVisualStyleBackColor = true;
             this.addbt.Click += new System.EventHandler(this.addbt_Click);
@@ -161,29 +170,29 @@
             // txtTencv
             // 
             this.txtTencv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTencv.Location = new System.Drawing.Point(168, 109);
-            this.txtTencv.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTencv.Location = new System.Drawing.Point(189, 136);
+            this.txtTencv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTencv.Name = "txtTencv";
-            this.txtTencv.Size = new System.Drawing.Size(235, 28);
+            this.txtTencv.Size = new System.Drawing.Size(264, 32);
             this.txtTencv.TabIndex = 78;
             // 
             // txtMacv
             // 
             this.txtMacv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMacv.Location = new System.Drawing.Point(168, 38);
-            this.txtMacv.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMacv.Location = new System.Drawing.Point(189, 48);
+            this.txtMacv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMacv.Name = "txtMacv";
-            this.txtMacv.Size = new System.Drawing.Size(235, 28);
+            this.txtMacv.Size = new System.Drawing.Size(264, 32);
             this.txtMacv.TabIndex = 78;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(473, 41);
+            this.label4.Location = new System.Drawing.Point(532, 51);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 24);
+            this.label4.Size = new System.Drawing.Size(86, 26);
             this.label4.TabIndex = 77;
             this.label4.Text = "Chi Tiết";
             // 
@@ -191,10 +200,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(21, 113);
+            this.label2.Location = new System.Drawing.Point(24, 141);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 24);
+            this.label2.Size = new System.Drawing.Size(155, 26);
             this.label2.TabIndex = 77;
             this.label2.Text = "Tên Công Việc";
             // 
@@ -202,10 +211,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 42);
+            this.label1.Location = new System.Drawing.Point(24, 52);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 24);
+            this.label1.Size = new System.Drawing.Size(149, 26);
             this.label1.TabIndex = 77;
             this.label1.Text = "Mã Công Việc";
             // 
@@ -219,25 +228,14 @@
             this.TenCV,
             this.ChiTiet});
             this.dataCongViec.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataCongViec.Location = new System.Drawing.Point(0, 261);
+            this.dataCongViec.Location = new System.Drawing.Point(0, 326);
+            this.dataCongViec.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataCongViec.Name = "dataCongViec";
             this.dataCongViec.RowHeadersWidth = 51;
             this.dataCongViec.RowTemplate.Height = 24;
-            this.dataCongViec.Size = new System.Drawing.Size(882, 192);
+            this.dataCongViec.Size = new System.Drawing.Size(992, 240);
             this.dataCongViec.TabIndex = 4;
             this.dataCongViec.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCongViec_CellClick);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // errorProvider2
-            // 
-            this.errorProvider2.ContainerControl = this;
-            // 
-            // errorProvider3
-            // 
-            this.errorProvider3.ContainerControl = this;
             // 
             // MaCV
             // 
@@ -260,13 +258,27 @@
             this.ChiTiet.MinimumWidth = 6;
             this.ChiTiet.Name = "ChiTiet";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.ContainerControl = this;
+            // 
             // frmCongViec
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 453);
+            this.ClientSize = new System.Drawing.Size(992, 566);
             this.Controls.Add(this.dataCongViec);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmCongViec";
             this.Text = "frmCongViec";
             this.groupBox1.ResumeLayout(false);

@@ -262,8 +262,6 @@ namespace Quanlythanhvientronglab.Views
             addbtn_Click(sender,e);
         }
 
-        
-
-        
+       
     }
 }
