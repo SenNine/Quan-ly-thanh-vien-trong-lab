@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbbMaDA = new System.Windows.Forms.ComboBox();
             this.txtChitiet = new System.Windows.Forms.RichTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -41,19 +42,18 @@
             this.txtTencv = new System.Windows.Forms.TextBox();
             this.txtMacv = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.cbbMaDA = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.listViewCV = new System.Windows.Forms.ListView();
             this.MaCV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MaDA = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TenCV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ChiTiet = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MaDA = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -80,6 +80,14 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Công Việc";
+            // 
+            // cbbMaDA
+            // 
+            this.cbbMaDA.FormattingEnabled = true;
+            this.cbbMaDA.Location = new System.Drawing.Point(165, 111);
+            this.cbbMaDA.Name = "cbbMaDA";
+            this.cbbMaDA.Size = new System.Drawing.Size(235, 30);
+            this.cbbMaDA.TabIndex = 87;
             // 
             // txtChitiet
             // 
@@ -193,6 +201,17 @@
             this.label4.TabIndex = 77;
             this.label4.Text = "Chi Tiết";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(18, 113);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(94, 24);
+            this.label3.TabIndex = 77;
+            this.label3.Text = "Mã Dự Án";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -227,25 +246,6 @@
             // 
             this.errorProvider3.ContainerControl = this;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(18, 113);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 24);
-            this.label3.TabIndex = 77;
-            this.label3.Text = "Mã Dự Án";
-            // 
-            // cbbMaDA
-            // 
-            this.cbbMaDA.FormattingEnabled = true;
-            this.cbbMaDA.Location = new System.Drawing.Point(165, 111);
-            this.cbbMaDA.Name = "cbbMaDA";
-            this.cbbMaDA.Size = new System.Drawing.Size(235, 30);
-            this.cbbMaDA.TabIndex = 87;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.listViewCV);
@@ -263,6 +263,7 @@
             this.ChiTiet,
             this.MaDA});
             this.listViewCV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewCV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewCV.GridLines = true;
             this.listViewCV.HideSelection = false;
             this.listViewCV.Location = new System.Drawing.Point(0, 0);
@@ -276,18 +277,22 @@
             // MaCV
             // 
             this.MaCV.Text = "Mã Công Việc";
-            // 
-            // MaDA
-            // 
-            this.MaDA.Text = "Mã Dự Án";
+            this.MaCV.Width = 100;
             // 
             // TenCV
             // 
             this.TenCV.Text = "Tên Công Việc";
+            this.TenCV.Width = 150;
             // 
             // ChiTiet
             // 
             this.ChiTiet.Text = "Chi Tiết";
+            this.ChiTiet.Width = 200;
+            // 
+            // MaDA
+            // 
+            this.MaDA.Text = "Mã Dự Án";
+            this.MaDA.Width = 150;
             // 
             // frmCongViec
             // 

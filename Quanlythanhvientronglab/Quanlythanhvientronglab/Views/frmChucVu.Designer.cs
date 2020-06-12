@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -211,6 +213,8 @@
             // MaCV
             // 
             this.MaCV.DataPropertyName = "MaChucVu";
+            dataGridViewCellStyle1.Format = "Microsoft Sans Serif, 10.8pt";
+            this.MaCV.DefaultCellStyle = dataGridViewCellStyle1;
             this.MaCV.HeaderText = "Mã Chức Vụ";
             this.MaCV.MinimumWidth = 6;
             this.MaCV.Name = "MaCV";
@@ -218,6 +222,8 @@
             // TenCV
             // 
             this.TenCV.DataPropertyName = "TenChucVu";
+            dataGridViewCellStyle2.Format = "Microsoft Sans Serif, 10.8pt";
+            this.TenCV.DefaultCellStyle = dataGridViewCellStyle2;
             this.TenCV.HeaderText = "Tên Chức Vụ";
             this.TenCV.MinimumWidth = 6;
             this.TenCV.Name = "TenCV";

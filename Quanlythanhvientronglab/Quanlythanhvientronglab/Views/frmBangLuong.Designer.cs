@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtTennv = new System.Windows.Forms.TextBox();
             this.txtLuong = new System.Windows.Forms.TextBox();
@@ -166,6 +170,8 @@
             // MaNV
             // 
             this.MaNV.DataPropertyName = "MaNV";
+            dataGridViewCellStyle1.Format = "Microsoft Sans Serif, 10.8pt";
+            this.MaNV.DefaultCellStyle = dataGridViewCellStyle1;
             this.MaNV.HeaderText = "Mã Nhân Viên";
             this.MaNV.MinimumWidth = 6;
             this.MaNV.Name = "MaNV";
@@ -173,6 +179,8 @@
             // TenNV
             // 
             this.TenNV.DataPropertyName = "TenNV";
+            dataGridViewCellStyle2.Format = "Microsoft Sans Serif, 10.8pt";
+            this.TenNV.DefaultCellStyle = dataGridViewCellStyle2;
             this.TenNV.HeaderText = "Tên Nhân Viên";
             this.TenNV.MinimumWidth = 6;
             this.TenNV.Name = "TenNV";
@@ -180,6 +188,8 @@
             // TienDo
             // 
             this.TienDo.DataPropertyName = "TienDo";
+            dataGridViewCellStyle3.Format = "Microsoft Sans Serif, 10.8pt";
+            this.TienDo.DefaultCellStyle = dataGridViewCellStyle3;
             this.TienDo.HeaderText = "Tiến Độ";
             this.TienDo.MinimumWidth = 6;
             this.TienDo.Name = "TienDo";
@@ -187,6 +197,8 @@
             // Luong
             // 
             this.Luong.DataPropertyName = "Luong";
+            dataGridViewCellStyle4.Format = "Microsoft Sans Serif, 10.8pt";
+            this.Luong.DefaultCellStyle = dataGridViewCellStyle4;
             this.Luong.HeaderText = "Lương";
             this.Luong.MinimumWidth = 6;
             this.Luong.Name = "Luong";
