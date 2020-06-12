@@ -179,23 +179,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Users\\Huynh Ngoc Phuc\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Quan-ly-thanh-vien-trong-lab\\QUẢN LÝ NHÂN SỰ\\THỰC TẬP TỐT NGHIỆP-NHÓM 5-QUẢN LÝ NHÂN SỰ\\QuanLyNhanSu2\\Base\\Base.csproj",
+      "projectUniqueName": "C:\\Users\\Huynh Ngoc Phuc\\Desktop\\Quan-ly-thanh-vien-trong-lab\\QUẢN LÝ NHÂN SỰ\\THỰC TẬP TỐT NGHIỆP-NHÓM 5-QUẢN LÝ NHÂN SỰ\\QuanLyNhanSu2\\Base\\Base.csproj",
       "projectName": "Base",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\Quan-ly-thanh-vien-trong-lab\\QUẢN LÝ NHÂN SỰ\\THỰC TẬP TỐT NGHIỆP-NHÓM 5-QUẢN LÝ NHÂN SỰ\\QuanLyNhanSu2\\Base\\Base.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\Quan-ly-thanh-vien-trong-lab\\QUẢN LÝ NHÂN SỰ\\THỰC TẬP TỐT NGHIỆP-NHÓM 5-QUẢN LÝ NHÂN SỰ\\QuanLyNhanSu2\\Base\\obj\\",
+      "projectPath": "C:\\Users\\Huynh Ngoc Phuc\\Desktop\\Quan-ly-thanh-vien-trong-lab\\QUẢN LÝ NHÂN SỰ\\THỰC TẬP TỐT NGHIỆP-NHÓM 5-QUẢN LÝ NHÂN SỰ\\QuanLyNhanSu2\\Base\\Base.csproj",
+      "packagesPath": "C:\\Users\\Huynh Ngoc Phuc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Huynh Ngoc Phuc\\Desktop\\Quan-ly-thanh-vien-trong-lab\\QUẢN LÝ NHÂN SỰ\\THỰC TẬP TỐT NGHIỆP-NHÓM 5-QUẢN LÝ NHÂN SỰ\\QuanLyNhanSu2\\Base\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Huynh Ngoc Phuc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -227,16 +227,10 @@
           }
         },
         "imports": [
-          "net461",
-          "net462",
-          "net47",
-          "net471",
-          "net472",
-          "net48"
+          "net461"
         ],
         "assetTargetFallback": true,
-        "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "warn": true
       }
     }
   }
