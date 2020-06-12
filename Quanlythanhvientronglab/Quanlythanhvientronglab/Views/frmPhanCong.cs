@@ -52,6 +52,12 @@ namespace Quanlythanhvientronglab.Views
             this.listsearchG.Items.Clear();
             this.listsearchX.DataSource = null;
             this.listsearchX.Items.Clear();
+
+            this.listBoxG.DataSource = null;
+            this.listBoxG.Items.Clear();
+            this.listBoxX.DataSource = null;
+            this.listBoxX.Items.Clear();
+
             this.txtTienDo.Text = "";
             this.cbbMada.SelectedIndex = -1;
 
@@ -89,6 +95,11 @@ namespace Quanlythanhvientronglab.Views
 
             ClassNhanVien nvien = NhanVienController.GetNV(this.cbbManv.Text.Trim());
 
+            foreach (var cvg in nvien.listCVLam.ToList())
+                nvien.listCVLam.Remove(cvg);
+            foreach (var cvx in nvien.listCVXong.ToList())
+                nvien.listCVXong.Remove(cvx);
+
             string displaycvGiao = "";
             string displaycvHoanThanh = "";
 
@@ -125,6 +136,8 @@ namespace Quanlythanhvientronglab.Views
                 ClassDuAn da = DAController.GetDuAn(this.cbbMada.Text.Trim());
                 List<ClassCongViec> lstcv = new List<ClassCongViec>();
 
+                
+
                 //lay danh sach cong viec cua du an vao listsearchG
                 foreach (var i in da.listCV)
                 {
@@ -149,11 +162,15 @@ namespace Quanlythanhvientronglab.Views
 
             //them cong viec vao list cong viec duoc giao
             //them cong viec vao list cong viec co the duoc hoan thanh
-            if(this.listsearchG.SelectedIndex>=0 && count==0)
+            try
             {
-                this.listBoxG.Items.Add(this.listsearchG.SelectedItem);
-                this.listsearchX.Items.Add(this.listsearchG.SelectedItem);
+                if (this.listsearchG.SelectedIndex >= 0 && count == 0)
+                {
+                    this.listBoxG.Items.Add(this.listsearchG.SelectedItem);
+                    this.listsearchX.Items.Add(this.listsearchG.SelectedItem);
+                }
             }
+            catch { }
         }
 
         private void listsearchX_DoubleClick(object sender, EventArgs e)
@@ -222,7 +239,9 @@ namespace Quanlythanhvientronglab.Views
 
                 this.cbbManv.Text = this.listViewPhancong.SelectedItems[0].SubItems[0].Text.Trim();
                 this.cbbMada.Text = this.listViewPhancong.SelectedItems[0].SubItems[1].Text.Trim();
+
                 
+
                 //chuyen du lieu dang text trong listview sang iteam va them vao listbox
                 string[] arrCVgiao = this.listViewPhancong.SelectedItems[0].SubItems[2].Text.Split();
                 foreach(var i in arrCVgiao)
@@ -232,6 +251,7 @@ namespace Quanlythanhvientronglab.Views
                         if(i==j.MaCV)
                         {
                             this.listBoxG.Items.Add(j);
+                            this.listsearchX.Items.Add(j);
                         }
                     }
                 }
@@ -251,8 +271,8 @@ namespace Quanlythanhvientronglab.Views
 
                 this.txtTienDo.Text = this.listViewPhancong.SelectedItems[0].SubItems[4].Text.Trim();
 
-                this.listsearchG.DataSource = null;
-                this.listsearchG.Items.Clear();
+                //this.listsearchG.DataSource = null;
+                //this.listsearchG.Items.Clear();
             }
             catch { }
         }

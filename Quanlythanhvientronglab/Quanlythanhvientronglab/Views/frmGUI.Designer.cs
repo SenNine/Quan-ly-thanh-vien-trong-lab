@@ -34,7 +34,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_congviec = new System.Windows.Forms.Button();
-            this.btn_bangcong = new System.Windows.Forms.Button();
             this.btn_chucvu = new System.Windows.Forms.Button();
             this.btn_phancong = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -98,7 +97,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btn_congviec);
-            this.groupBox1.Controls.Add(this.btn_bangcong);
             this.groupBox1.Controls.Add(this.btn_chucvu);
             this.groupBox1.Controls.Add(this.btn_phancong);
             this.groupBox1.Location = new System.Drawing.Point(55, 288);
@@ -119,21 +117,10 @@
             this.btn_congviec.UseVisualStyleBackColor = true;
             this.btn_congviec.Click += new System.EventHandler(this.btn_thannhan_Click);
             // 
-            // btn_bangcong
-            // 
-            this.btn_bangcong.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.btn_bangcong.Location = new System.Drawing.Point(40, 193);
-            this.btn_bangcong.Name = "btn_bangcong";
-            this.btn_bangcong.Size = new System.Drawing.Size(109, 31);
-            this.btn_bangcong.TabIndex = 0;
-            this.btn_bangcong.Text = "Bảng công";
-            this.btn_bangcong.UseVisualStyleBackColor = true;
-            this.btn_bangcong.Click += new System.EventHandler(this.btn_bangcong_Click);
-            // 
             // btn_chucvu
             // 
             this.btn_chucvu.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.btn_chucvu.Location = new System.Drawing.Point(40, 120);
+            this.btn_chucvu.Location = new System.Drawing.Point(40, 156);
             this.btn_chucvu.Name = "btn_chucvu";
             this.btn_chucvu.Size = new System.Drawing.Size(109, 32);
             this.btn_chucvu.TabIndex = 0;
@@ -180,6 +167,7 @@
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
             this.exportToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
             this.exportToolStripMenuItem.Text = "Export";
+            this.exportToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
             // 
             // tìmKiếmToolStripMenuItem
             // 
@@ -294,7 +282,6 @@
         private System.Windows.Forms.Button btn_hosonv;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_congviec;
-        private System.Windows.Forms.Button btn_bangcong;
         private System.Windows.Forms.Button btn_chucvu;
         private System.Windows.Forms.Button btn_phancong;
         private System.Windows.Forms.PictureBox pictureBox1;

@@ -43,28 +43,34 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataCongViec = new System.Windows.Forms.DataGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.MaCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ChiTiet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbbMaDA = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.listViewCV = new System.Windows.Forms.ListView();
+            this.MaCV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MaDA = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TenCV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ChiTiet = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataCongViec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbbMaDA);
             this.groupBox1.Controls.Add(this.txtChitiet);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.txtTencv);
             this.groupBox1.Controls.Add(this.txtMacv);
             this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -161,7 +167,7 @@
             // txtTencv
             // 
             this.txtTencv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTencv.Location = new System.Drawing.Point(168, 109);
+            this.txtTencv.Location = new System.Drawing.Point(165, 172);
             this.txtTencv.Margin = new System.Windows.Forms.Padding(4);
             this.txtTencv.Name = "txtTencv";
             this.txtTencv.Size = new System.Drawing.Size(235, 28);
@@ -170,7 +176,7 @@
             // txtMacv
             // 
             this.txtMacv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMacv.Location = new System.Drawing.Point(168, 38);
+            this.txtMacv.Location = new System.Drawing.Point(165, 41);
             this.txtMacv.Margin = new System.Windows.Forms.Padding(4);
             this.txtMacv.Name = "txtMacv";
             this.txtMacv.Size = new System.Drawing.Size(235, 28);
@@ -191,7 +197,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(21, 113);
+            this.label2.Location = new System.Drawing.Point(18, 176);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(138, 24);
@@ -202,30 +208,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 42);
+            this.label1.Location = new System.Drawing.Point(18, 45);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 24);
             this.label1.TabIndex = 77;
             this.label1.Text = "Mã Công Việc";
-            // 
-            // dataCongViec
-            // 
-            this.dataCongViec.AllowUserToAddRows = false;
-            this.dataCongViec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataCongViec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataCongViec.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaCV,
-            this.TenCV,
-            this.ChiTiet});
-            this.dataCongViec.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataCongViec.Location = new System.Drawing.Point(0, 261);
-            this.dataCongViec.Name = "dataCongViec";
-            this.dataCongViec.RowHeadersWidth = 51;
-            this.dataCongViec.RowTemplate.Height = 24;
-            this.dataCongViec.Size = new System.Drawing.Size(882, 192);
-            this.dataCongViec.TabIndex = 4;
-            this.dataCongViec.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCongViec_CellClick);
             // 
             // errorProvider1
             // 
@@ -239,33 +227,74 @@
             // 
             this.errorProvider3.ContainerControl = this;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(18, 113);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(94, 24);
+            this.label3.TabIndex = 77;
+            this.label3.Text = "Mã Dự Án";
+            // 
+            // cbbMaDA
+            // 
+            this.cbbMaDA.FormattingEnabled = true;
+            this.cbbMaDA.Location = new System.Drawing.Point(165, 111);
+            this.cbbMaDA.Name = "cbbMaDA";
+            this.cbbMaDA.Size = new System.Drawing.Size(235, 30);
+            this.cbbMaDA.TabIndex = 87;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.listViewCV);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 251);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(882, 202);
+            this.panel1.TabIndex = 4;
+            // 
+            // listViewCV
+            // 
+            this.listViewCV.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.MaCV,
+            this.TenCV,
+            this.ChiTiet,
+            this.MaDA});
+            this.listViewCV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewCV.GridLines = true;
+            this.listViewCV.HideSelection = false;
+            this.listViewCV.Location = new System.Drawing.Point(0, 0);
+            this.listViewCV.Name = "listViewCV";
+            this.listViewCV.Size = new System.Drawing.Size(882, 202);
+            this.listViewCV.TabIndex = 0;
+            this.listViewCV.UseCompatibleStateImageBehavior = false;
+            this.listViewCV.View = System.Windows.Forms.View.Details;
+            this.listViewCV.Click += new System.EventHandler(this.listViewCV_Click);
+            // 
             // MaCV
             // 
-            this.MaCV.DataPropertyName = "MaCV";
-            this.MaCV.HeaderText = "Mã Công Việc";
-            this.MaCV.MinimumWidth = 6;
-            this.MaCV.Name = "MaCV";
+            this.MaCV.Text = "Mã Công Việc";
+            // 
+            // MaDA
+            // 
+            this.MaDA.Text = "Mã Dự Án";
             // 
             // TenCV
             // 
-            this.TenCV.DataPropertyName = "TenCV";
-            this.TenCV.HeaderText = "Tên Công Việc";
-            this.TenCV.MinimumWidth = 6;
-            this.TenCV.Name = "TenCV";
+            this.TenCV.Text = "Tên Công Việc";
             // 
             // ChiTiet
             // 
-            this.ChiTiet.DataPropertyName = "ChiTiet";
-            this.ChiTiet.HeaderText = "Chi Tiết";
-            this.ChiTiet.MinimumWidth = 6;
-            this.ChiTiet.Name = "ChiTiet";
+            this.ChiTiet.Text = "Chi Tiết";
             // 
             // frmCongViec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(882, 453);
-            this.Controls.Add(this.dataCongViec);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmCongViec";
             this.Text = "frmCongViec";
@@ -273,10 +302,10 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataCongViec)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -297,12 +326,16 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox txtChitiet;
-        private System.Windows.Forms.DataGridView dataCongViec;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
         private System.Windows.Forms.ErrorProvider errorProvider3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaCV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenCV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ChiTiet;
+        private System.Windows.Forms.ComboBox cbbMaDA;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ListView listViewCV;
+        private System.Windows.Forms.ColumnHeader MaCV;
+        private System.Windows.Forms.ColumnHeader MaDA;
+        private System.Windows.Forms.ColumnHeader TenCV;
+        private System.Windows.Forms.ColumnHeader ChiTiet;
     }
 }

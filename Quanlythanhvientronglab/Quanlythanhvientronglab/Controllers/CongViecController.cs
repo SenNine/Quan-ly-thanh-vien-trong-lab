@@ -17,7 +17,24 @@ namespace Quanlythanhvientronglab.Controllers
             {
                 using (var _context = new DBManageContext())
                 {
-                    _context.tbCongViec.Add(cv);
+
+                    ClassCongViec congviec = new ClassCongViec { MaCV = cv.MaCV, TenCV = cv.TenCV, ChiTiet = cv.ChiTiet };
+
+                    _context.tbCongViec.Add(congviec);
+                    _context.SaveChanges();
+
+                    var dbcv = (from c in _context.tbCongViec
+                                where c.MaCV == cv.MaCV
+                                select c).Single();
+
+                    foreach (var i in cv.listDA)
+                    {
+                        var dbda = (from d in _context.tbDuAn
+                                    where d.MaDA == i.MaDA
+                                    select d).Single();
+                        dbcv.listDA.Add(dbda);
+                    }
+                    _context.tbCongViec.AddOrUpdate(dbcv);
                     _context.SaveChanges();
                 }
             }
@@ -86,15 +103,24 @@ namespace Quanlythanhvientronglab.Controllers
             {
                 using (var _context = new DBManageContext())
                 {
-                    _context.tbCongViec.AddOrUpdate(cv);
+                    ClassCongViec congviec = new ClassCongViec { MaCV = cv.MaCV, TenCV = cv.TenCV, ChiTiet = cv.ChiTiet };
+                    foreach(var d in cv.listDA)
+                    {
+                        var dbda = (from da in _context.tbDuAn
+                                    where da.MaDA == d.MaDA
+                                    select da).Single();
+                        congviec.listDA.Add(dbda);
+                    }
+                    _context.tbCongViec.AddOrUpdate(congviec);
                     _context.SaveChanges();
+                    return true;
                 }
             }
             catch
             {
                 return false;
             }
-            return true;
+            
         }
     }
 }
