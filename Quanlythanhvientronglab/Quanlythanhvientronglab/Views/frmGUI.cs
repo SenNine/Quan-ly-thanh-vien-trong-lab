@@ -148,6 +148,20 @@ namespace Quanlythanhvientronglab.Views
             //app.Quit();
         }
 
-        
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void thôngTinBảnQuyềnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string info = "Đồ án môn Lập trình windows\nGiáo viên hướng dẫn: Huỳnh Xuân Phụng \nTác giả:\n\tLê Trần Đức Huy\n\tHuỳnh Ngọc Phúc";
+            MessageBox.Show(info, "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void liênHệToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.facebook.com/duchuy.letran.3/");
+        }
     }
 }

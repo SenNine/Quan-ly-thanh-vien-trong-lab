@@ -44,10 +44,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataChucVu = new System.Windows.Forms.DataGridView();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.MaCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataChucVu)).BeginInit();
@@ -202,14 +202,6 @@
             this.dataChucVu.TabIndex = 3;
             this.dataChucVu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataChucVu_CellClick);
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // errorProvider2
-            // 
-            this.errorProvider2.ContainerControl = this;
-            // 
             // MaCV
             // 
             this.MaCV.DataPropertyName = "MaChucVu";
@@ -228,6 +220,14 @@
             this.TenCV.MinimumWidth = 6;
             this.TenCV.Name = "TenCV";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
             // frmChucVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -236,7 +236,7 @@
             this.Controls.Add(this.dataChucVu);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmChucVu";
-            this.Text = "frmChucVu";
+            this.Text = "Chức vụ";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

@@ -211,7 +211,7 @@
             this.Controls.Add(this.dataLuong);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmBangLuong";
-            this.Text = "frmBangLuong";
+            this.Text = "Bảng Lương";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLuong)).EndInit();

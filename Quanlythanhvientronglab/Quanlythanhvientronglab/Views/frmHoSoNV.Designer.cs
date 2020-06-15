@@ -544,7 +544,7 @@
             this.Controls.Add(this.dataNV);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmHoSoNV";
-            this.Text = "frmHoSoNV";
+            this.Text = "Hồ sơ";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

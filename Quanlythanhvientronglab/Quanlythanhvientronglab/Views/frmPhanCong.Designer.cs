@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.listsearchG = new System.Windows.Forms.ListBox();
             this.listsearchX = new System.Windows.Forms.ListBox();
             this.listBoxX = new System.Windows.Forms.ListBox();
@@ -53,7 +54,6 @@
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -84,6 +84,13 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Phân Công";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(707, 331);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(190, 28);
+            this.progressBar1.TabIndex = 90;
             // 
             // listsearchG
             // 
@@ -287,13 +294,6 @@
             // 
             this.errorProvider4.ContainerControl = this;
             // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(707, 331);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(190, 28);
-            this.progressBar1.TabIndex = 90;
-            // 
             // frmPhanCong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -302,7 +302,7 @@
             this.Controls.Add(this.listViewPhancong);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmPhanCong";
-            this.Text = "frmPhanCong";
+            this.Text = "Phân công";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

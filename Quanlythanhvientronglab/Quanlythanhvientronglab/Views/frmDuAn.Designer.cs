@@ -331,7 +331,7 @@
             this.Controls.Add(this.listViewda);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmDuAn";
-            this.Text = "frmDuAn";
+            this.Text = "Dự án";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
