@@ -1,4 +1,5 @@
-﻿using Quanlythanhvientronglab.Models;
+﻿using Quanlythanhvientronglab.Controllers;
+using Quanlythanhvientronglab.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -115,7 +116,7 @@ namespace Quanlythanhvientronglab.Views
             Microsoft.Office.Interop.Excel.Range cl7 = worksheet.get_Range("G3", "G3");
             cl3.ColumnWidth = 20;
 
-            int a = fnv.dataNV.Rows.Count + 1;
+            int a = fnv.dataNV.Rows.Count + 2;
             Microsoft.Office.Interop.Excel.Range rowHead = worksheet.get_Range("A2", "I"+a.ToString());
             rowHead.Font.Bold = true;
             //kẻ viền
@@ -132,13 +133,16 @@ namespace Quanlythanhvientronglab.Views
             }
 
             // storing Each row and column value to excel sheet  
-            for (int i = 0; i < fnv.dataNV.Rows.Count - 1; i++)
+            for (int i = 0; i < fnv.dataNV.Rows.Count ; i++)
             {
                 for (int j = 0; j < fnv.dataNV.Columns.Count-4; j++)
                 {
                     worksheet.Cells[i + 3, j + 1] = fnv.dataNV.Rows[i].Cells[j].Value.ToString();
                 }
             }
+            List<ClassNhanVien> nv = NhanVienController.GetLuongNV();
+            for (int i = 0; i < fnv.dataNV.Rows.Count ; i++)
+                worksheet.Cells[i + 3, 9] = nv[i].Luong.ToString();
             // save the application  
             //workbook.SaveAs("c:\\output.xlsx", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
             //app.Quit();

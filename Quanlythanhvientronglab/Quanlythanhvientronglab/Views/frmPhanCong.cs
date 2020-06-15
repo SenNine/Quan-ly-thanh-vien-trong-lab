@@ -19,16 +19,17 @@ namespace Quanlythanhvientronglab.Views
             InitializeComponent();
             this.cbbManv.DataSource = NhanVienController.GetListNV();
             this.cbbMada.DataSource = DAController.GetListDA();
+            
             ClearControls();
             ShowData();
         }
         private bool KiemTraErr(bool check)
         {
-            if(this.listBoxG.Items.Count==0)
-            {
-                check = true;
-                this.errorProvider1.SetError(this.listBoxG, "Hay chon ma cong viec");
-            }
+            //if(this.listBoxG.Items.Count==0)
+            //{
+            //    check = true;
+            //    this.errorProvider1.SetError(this.listBoxG, "Hay chon ma cong viec");
+            //}
             if(this.cbbManv.Text.Trim().Length<=0)
             {
                 check = true;
@@ -58,7 +59,7 @@ namespace Quanlythanhvientronglab.Views
             this.listBoxX.DataSource = null;
             this.listBoxX.Items.Clear();
 
-            this.txtTienDo.Text = "";
+            this.progressBar1.Value = 0;
             this.cbbMada.SelectedIndex = -1;
 
         }
@@ -79,7 +80,7 @@ namespace Quanlythanhvientronglab.Views
                     displaycvHoanThanh = displaycvHoanThanh + j + " ";
 
                 ListViewItem nv = new ListViewItem(i.MaNV);
-                nv.SubItems.Add(new ListViewItem.ListViewSubItem(nv, i.MaDA));
+                
                 nv.SubItems.Add(new ListViewItem.ListViewSubItem(nv, displaycvGiao));
                 nv.SubItems.Add(new ListViewItem.ListViewSubItem(nv, displaycvHoanThanh));
                 nv.SubItems.Add(new ListViewItem.ListViewSubItem(nv, i.TienDo));
@@ -103,11 +104,16 @@ namespace Quanlythanhvientronglab.Views
             string displaycvGiao = "";
             string displaycvHoanThanh = "";
 
-            for(int i=0;i<listBoxG.Items.Count;i++)
+            for (int i = 0; i < listBoxG.Items.Count; i++)
             {
-                displaycvGiao = displaycvGiao + this.listBoxG.Items +" ";
-                nvien.listCVLam.Add(CongViecController.GetCV(this.listBoxG.Items[i].ToString()));
+                displaycvGiao = displaycvGiao + this.listBoxG.Items + " ";
+                ClassCongViec cv = CongViecController.GetCV(this.listBoxG.Items[i].ToString());
+                nvien.listCVLam.Add(cv);
+
+                //nvien.MaDA = cv.listDA.ToList()[0].ToString() + " " + nvien.MaDA;
             }
+
+           
 
             for(int j=0;j<listBoxX.Items.Count;j++)
             {
@@ -238,7 +244,7 @@ namespace Quanlythanhvientronglab.Views
 
 
                 this.cbbManv.Text = this.listViewPhancong.SelectedItems[0].SubItems[0].Text.Trim();
-                this.cbbMada.Text = this.listViewPhancong.SelectedItems[0].SubItems[1].Text.Trim();
+                //this.cbbMada.Text = this.listViewPhancong.SelectedItems[0].SubItems[1].Text.Trim();
 
                 
 
@@ -269,8 +275,15 @@ namespace Quanlythanhvientronglab.Views
                     }
                 }
 
-                this.txtTienDo.Text = this.listViewPhancong.SelectedItems[0].SubItems[4].Text.Trim();
-
+                string[] arr = this.listViewPhancong.SelectedItems[0].SubItems[3].Text.Trim().Split('/');
+                //this.progTienDo.Value = 100;
+                if(arr[1]=="0")
+                {
+                    this.progressBar1.Value = 0;
+                    return;
+                }
+                double a = Convert.ToDouble(arr[0])/Convert.ToDouble(arr[1]) * 100;
+                this.progressBar1.Value = Convert.ToInt32(a);
                 //this.listsearchG.DataSource = null;
                 //this.listsearchG.Items.Clear();
             }

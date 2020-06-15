@@ -197,7 +197,7 @@
             // Luong
             // 
             this.Luong.DataPropertyName = "Luong";
-            dataGridViewCellStyle4.Format = "Microsoft Sans Serif, 10.8pt";
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.Luong.DefaultCellStyle = dataGridViewCellStyle4;
             this.Luong.HeaderText = "Lương";
             this.Luong.MinimumWidth = 6;

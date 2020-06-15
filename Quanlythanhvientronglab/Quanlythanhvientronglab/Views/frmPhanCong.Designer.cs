@@ -34,7 +34,6 @@
             this.listsearchX = new System.Windows.Forms.ListBox();
             this.listBoxX = new System.Windows.Forms.ListBox();
             this.listBoxG = new System.Windows.Forms.ListBox();
-            this.txtTienDo = new System.Windows.Forms.TextBox();
             this.cbbManv = new System.Windows.Forms.ComboBox();
             this.cbbMada = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -47,7 +46,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.listViewPhancong = new System.Windows.Forms.ListView();
             this.MaNV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MaDA = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.MaCVgiao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.MaCVXong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TienDo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -55,6 +53,7 @@
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -65,11 +64,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.progressBar1);
             this.groupBox1.Controls.Add(this.listsearchG);
             this.groupBox1.Controls.Add(this.listsearchX);
             this.groupBox1.Controls.Add(this.listBoxX);
             this.groupBox1.Controls.Add(this.listBoxG);
-            this.groupBox1.Controls.Add(this.txtTienDo);
             this.groupBox1.Controls.Add(this.cbbManv);
             this.groupBox1.Controls.Add(this.cbbMada);
             this.groupBox1.Controls.Add(this.groupBox2);
@@ -125,14 +124,6 @@
             this.listBoxG.Size = new System.Drawing.Size(111, 92);
             this.listBoxG.TabIndex = 88;
             this.listBoxG.DoubleClick += new System.EventHandler(this.listBoxG_DoubleClick);
-            // 
-            // txtTienDo
-            // 
-            this.txtTienDo.Enabled = false;
-            this.txtTienDo.Location = new System.Drawing.Point(707, 332);
-            this.txtTienDo.Name = "txtTienDo";
-            this.txtTienDo.Size = new System.Drawing.Size(100, 28);
-            this.txtTienDo.TabIndex = 87;
             // 
             // cbbManv
             // 
@@ -245,7 +236,6 @@
             // 
             this.listViewPhancong.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.MaNV,
-            this.MaDA,
             this.MaCVgiao,
             this.MaCVXong,
             this.TienDo});
@@ -265,11 +255,6 @@
             // 
             this.MaNV.Text = "Mã Nhân Viên";
             this.MaNV.Width = 110;
-            // 
-            // MaDA
-            // 
-            this.MaDA.Text = "Mã Dự Án";
-            this.MaDA.Width = 110;
             // 
             // MaCVgiao
             // 
@@ -301,6 +286,13 @@
             // errorProvider4
             // 
             this.errorProvider4.ContainerControl = this;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(707, 331);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(190, 28);
+            this.progressBar1.TabIndex = 90;
             // 
             // frmPhanCong
             // 
@@ -336,12 +328,10 @@
         private System.Windows.Forms.ComboBox cbbMada;
         private System.Windows.Forms.ListView listViewPhancong;
         private System.Windows.Forms.ColumnHeader MaNV;
-        private System.Windows.Forms.ColumnHeader MaDA;
         private System.Windows.Forms.ColumnHeader MaCVgiao;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ColumnHeader MaCVXong;
         private System.Windows.Forms.ColumnHeader TienDo;
-        private System.Windows.Forms.TextBox txtTienDo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
@@ -351,5 +341,6 @@
         private System.Windows.Forms.ListBox listBoxG;
         private System.Windows.Forms.ListBox listsearchG;
         private System.Windows.Forms.ListBox listsearchX;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
