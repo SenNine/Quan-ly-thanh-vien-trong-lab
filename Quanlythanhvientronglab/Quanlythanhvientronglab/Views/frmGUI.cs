@@ -163,5 +163,17 @@ namespace Quanlythanhvientronglab.Views
         {
             System.Diagnostics.Process.Start("https://www.facebook.com/duchuy.letran.3/");
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            frmTimKiem TK = new frmTimKiem();
+            TK.Show();
+        }
+
+        private void tìmKiếmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTimKiem TK = new frmTimKiem();
+            TK.Show();
+        }
     }
 }
