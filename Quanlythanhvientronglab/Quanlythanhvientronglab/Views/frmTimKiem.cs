@@ -33,6 +33,7 @@ namespace Quanlythanhvientronglab.Views
             FindList.Add(new find("MaDA"));
             cbbChonTheo.DataSource = FindList;
             cbbChonTheo.DisplayMember = "Name";
+
         }
 
         int kiemtra()
@@ -79,6 +80,9 @@ namespace Quanlythanhvientronglab.Views
                              where c.MaNV == Tmp
                              select c;
                 dataGridView1.DataSource = result.ToList();
+                dataGridView1.Columns[10].Visible = false;
+                dataGridView1.Columns[11].Visible = false;
+                dataGridView1.Columns[12].Visible = false;
                 cbbTimKiem.Text = Tmp;
                 cbbTimKiem.Show();
 
@@ -90,6 +94,9 @@ namespace Quanlythanhvientronglab.Views
                              where c.MaDA == Tmp
                              select c;
                 dataGridView1.DataSource = result.ToList();
+                dataGridView1.Columns[10].Visible = false;
+                dataGridView1.Columns[11].Visible = false;
+                dataGridView1.Columns[12].Visible = false;
                 cbbTimKiem.Text = Tmp;
                 cbbTimKiem.Show();
             }

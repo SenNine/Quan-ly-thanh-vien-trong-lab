@@ -52,3 +52,4 @@ C:\Users\Huynh Ngoc Phuc\Desktop\Quan-ly-thanh-vien-trong-lab\Quanlythanhvientro
 C:\Users\Huynh Ngoc Phuc\Desktop\Quan-ly-thanh-vien-trong-lab\Quanlythanhvientronglab\Quanlythanhvientronglab\obj\Debug\Quanlythanhvientronglab.exe
 C:\Users\Huynh Ngoc Phuc\Desktop\Quan-ly-thanh-vien-trong-lab\Quanlythanhvientronglab\Quanlythanhvientronglab\obj\Debug\Quanlythanhvientronglab.pdb
 C:\Users\Huynh Ngoc Phuc\Desktop\Quan-ly-thanh-vien-trong-lab\Quanlythanhvientronglab\Quanlythanhvientronglab\obj\Debug\Quanlythanhvientronglab.Views.frmTimKiem.resources
+C:\Users\Admin\Desktop\Quan-ly-thanh-vien-trong-lab\Quanlythanhvientronglab\Quanlythanhvientronglab\obj\Debug\Quanlythanhvientronglab.Views.frmTimKiem.resources

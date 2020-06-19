@@ -1,4 +1,5 @@
-﻿using Quanlythanhvientronglab.Controllers;
+﻿using Microsoft.Office.Interop.Excel;
+using Quanlythanhvientronglab.Controllers;
 using Quanlythanhvientronglab.Models;
 using System;
 using System.Collections.Generic;
@@ -18,8 +19,11 @@ namespace Quanlythanhvientronglab.Views
         {
             InitializeComponent();
             this.cbbManv.DataSource = NhanVienController.GetListNV();
-            this.cbbMada.DataSource = DAController.GetListDA();
-            
+            //this.cbbMada.DataSource = DAController.GetListDA();
+            foreach (var da in DAController.GetListDA())
+            {
+                this.checkedListBox1.Items.Add(da);
+            }
             ClearControls();
             ShowData();
         }
@@ -35,11 +39,11 @@ namespace Quanlythanhvientronglab.Views
                 check = true;
                 this.errorProvider2.SetError(this.cbbManv,"Hay chon ma nhan vien"); 
             }
-            if(this.cbbMada.Text.Trim().Length<=0)
-            {
-                check = true;
-                this.errorProvider3.SetError(this.cbbMada, "Hay chon ma du an");
-            }
+            //if(this.cbbMada.Text.Trim().Length<=0)
+            //{
+            //    check = true;
+            //    this.errorProvider3.SetError(this.cbbMada, "Hay chon ma du an");
+            //}
             return check;
         }
         private void ClearControls()
@@ -60,7 +64,12 @@ namespace Quanlythanhvientronglab.Views
             this.listBoxX.Items.Clear();
 
             this.progressBar1.Value = 0;
-            this.cbbMada.SelectedIndex = -1;
+            //this.cbbMada.SelectedIndex = -1;
+
+            for (int i = 0; i < checkedListBox1.Items.Count; i++)
+            {
+                checkedListBox1.SetItemChecked(i, false);
+            }
 
         }
         private void ShowData()
@@ -84,7 +93,7 @@ namespace Quanlythanhvientronglab.Views
                 nv.SubItems.Add(new ListViewItem.ListViewSubItem(nv, displaycvGiao));
                 nv.SubItems.Add(new ListViewItem.ListViewSubItem(nv, displaycvHoanThanh));
                 nv.SubItems.Add(new ListViewItem.ListViewSubItem(nv, i.TienDo));
-
+                nv.SubItems.Add(new ListViewItem.ListViewSubItem(nv, i.MaDA));
                 this.listViewPhancong.Items.Add(nv);
             }
         }
@@ -121,8 +130,12 @@ namespace Quanlythanhvientronglab.Views
                 nvien.listCVXong.Add(CongViecController.GetCV(this.listBoxX.Items[j].ToString()));
             }
 
-            nvien.MaDA = this.cbbMada.Text.Trim();
-
+            string mada = "";
+            foreach(var i in this.checkedListBox1.CheckedItems)
+            {
+                mada = mada + i.ToString() + " ";
+            }
+            nvien.MaDA = mada;
             if (NhanVienController.UpdateNvien(nvien)==false)
             {
                 MessageBox.Show("Loi them cong viec", "Loi", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -134,25 +147,7 @@ namespace Quanlythanhvientronglab.Views
             ClearControls();
         }
 
-        private void cbbMada_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if(this.cbbMada.SelectedIndex!=-1)
-            {
-                //lay du an tu csdl
-                ClassDuAn da = DAController.GetDuAn(this.cbbMada.Text.Trim());
-                List<ClassCongViec> lstcv = new List<ClassCongViec>();
-
-                
-
-                //lay danh sach cong viec cua du an vao listsearchG
-                foreach (var i in da.listCV)
-                {
-                    lstcv.Add(i);
-                }
-                listsearchG.DataSource = lstcv;              
-            }
-            
-        }
+        
 
         private void listsearchG_DoubleClick(object sender, EventArgs e)
         {
@@ -160,7 +155,7 @@ namespace Quanlythanhvientronglab.Views
             //kiem tra cong viec dc chon trong listsearch da co trong danh sach cong viec duoc giao chua
             foreach(var x in listBoxG.Items)
             {
-                if(x==this.listsearchG.SelectedItem)
+                if(x.ToString().Trim() == this.listsearchG.SelectedItem.ToString().Trim())
                 {
                     count++;
                 }
@@ -185,7 +180,7 @@ namespace Quanlythanhvientronglab.Views
             int count = 0;
             foreach (var x in listBoxX.Items)
             {
-                if (x == this.listsearchX.SelectedItem)
+                if (x.ToString().Trim() == this.listsearchX.SelectedItem.ToString().Trim())
                 {
                     count++;
                 }
@@ -249,7 +244,7 @@ namespace Quanlythanhvientronglab.Views
                 
 
                 //chuyen du lieu dang text trong listview sang iteam va them vao listbox
-                string[] arrCVgiao = this.listViewPhancong.SelectedItems[0].SubItems[2].Text.Split();
+                string[] arrCVgiao = this.listViewPhancong.SelectedItems[0].SubItems[1].Text.Split();
                 foreach(var i in arrCVgiao)
                 {
                     foreach(var j in CongViecController.GetListCV())
@@ -263,7 +258,7 @@ namespace Quanlythanhvientronglab.Views
                 }
 
                 //chuyen du lieu dang text trong listview sang iteam va them vao listbox
-                string[] arrCVxong = this.listViewPhancong.SelectedItems[0].SubItems[3].Text.Split();
+                string[] arrCVxong = this.listViewPhancong.SelectedItems[0].SubItems[2].Text.Split();
                 foreach (var i in arrCVxong)
                 {
                     foreach (var j in CongViecController.GetListCV())
@@ -272,6 +267,16 @@ namespace Quanlythanhvientronglab.Views
                         {
                             this.listBoxX.Items.Add(j);
                         }
+                    }
+                }
+
+                string[] mada = this.listViewPhancong.SelectedItems[0].SubItems[4].Text.Split();
+                for(int i=0;i<this.checkedListBox1.Items.Count;i++)
+                {
+                    for(int j=0;j<mada.Length;j++)
+                    {
+                        if (this.checkedListBox1.Items[i].ToString() == mada[j])
+                            this.checkedListBox1.SetItemChecked(i, true);
                     }
                 }
 
@@ -295,8 +300,36 @@ namespace Quanlythanhvientronglab.Views
             addbtn_Click(sender,e);
         }
 
-        
+        private void checkedListBox1_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            
+            
+        }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                List<ClassCongViec> lstcv = new List<ClassCongViec>();
+                this.listsearchG.DataSource = null;
+                this.listsearchG.Items.Clear();
+                foreach (var item in this.checkedListBox1.CheckedItems)
+                {
+                    ClassDuAn da = DAController.GetDuAn(item.ToString());
+                    
+                    //lay danh sach cong viec cua du an vao listsearchG
+                    foreach (var i in da.listCV)
+                    {
+                        lstcv.Add(i);
+                    }
+                    
+
+                    //MessageBox.Show(item.ToString());
+                }
+                listsearchG.DataSource = lstcv;
+            }
+            catch
+            { }
+        }
     }
 }

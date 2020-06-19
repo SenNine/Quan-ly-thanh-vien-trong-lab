@@ -30,13 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.listsearchG = new System.Windows.Forms.ListBox();
             this.listsearchX = new System.Windows.Forms.ListBox();
             this.listBoxX = new System.Windows.Forms.ListBox();
             this.listBoxG = new System.Windows.Forms.ListBox();
             this.cbbManv = new System.Windows.Forms.ComboBox();
-            this.cbbMada = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.addbtn = new System.Windows.Forms.Button();
@@ -50,6 +53,7 @@
             this.MaCVgiao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.MaCVXong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TienDo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MaDA = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -64,13 +68,16 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.checkedListBox1);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.progressBar1);
             this.groupBox1.Controls.Add(this.listsearchG);
             this.groupBox1.Controls.Add(this.listsearchX);
             this.groupBox1.Controls.Add(this.listBoxX);
             this.groupBox1.Controls.Add(this.listBoxG);
             this.groupBox1.Controls.Add(this.cbbManv);
-            this.groupBox1.Controls.Add(this.cbbMada);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -83,7 +90,48 @@
             this.groupBox1.Size = new System.Drawing.Size(1058, 377);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông Tin Phân Công";
+            this.groupBox1.Text = "Thông tin phân công";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(300, 232);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(81, 35);
+            this.button1.TabIndex = 94;
+            this.button1.Text = "Chọn";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(202, 130);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(179, 96);
+            this.checkedListBox1.TabIndex = 93;
+            this.checkedListBox1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBox1_ItemCheck);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(846, 180);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(77, 24);
+            this.label7.TabIndex = 92;
+            this.label7.Text = "Dự Kiến";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(846, 42);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 24);
+            this.label6.TabIndex = 91;
+            this.label6.Text = "Dự Kiến";
             // 
             // progressBar1
             // 
@@ -96,7 +144,7 @@
             // 
             this.listsearchG.FormattingEnabled = true;
             this.listsearchG.ItemHeight = 22;
-            this.listsearchG.Location = new System.Drawing.Point(903, 42);
+            this.listsearchG.Location = new System.Drawing.Point(930, 42);
             this.listsearchG.Name = "listsearchG";
             this.listsearchG.Size = new System.Drawing.Size(90, 92);
             this.listsearchG.TabIndex = 89;
@@ -106,7 +154,7 @@
             // 
             this.listsearchX.FormattingEnabled = true;
             this.listsearchX.ItemHeight = 22;
-            this.listsearchX.Location = new System.Drawing.Point(903, 177);
+            this.listsearchX.Location = new System.Drawing.Point(930, 177);
             this.listsearchX.Name = "listsearchX";
             this.listsearchX.Size = new System.Drawing.Size(90, 92);
             this.listsearchX.TabIndex = 89;
@@ -142,24 +190,13 @@
             this.cbbManv.Size = new System.Drawing.Size(179, 30);
             this.cbbManv.TabIndex = 86;
             // 
-            // cbbMada
-            // 
-            this.cbbMada.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbbMada.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbbMada.FormattingEnabled = true;
-            this.cbbMada.Location = new System.Drawing.Point(202, 127);
-            this.cbbMada.Name = "cbbMada";
-            this.cbbMada.Size = new System.Drawing.Size(175, 30);
-            this.cbbMada.TabIndex = 86;
-            this.cbbMada.SelectedIndexChanged += new System.EventHandler(this.cbbMada_SelectedIndexChanged);
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.addbtn);
-            this.groupBox2.Location = new System.Drawing.Point(25, 213);
+            this.groupBox2.Location = new System.Drawing.Point(6, 241);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(309, 130);
+            this.groupBox2.Size = new System.Drawing.Size(189, 130);
             this.groupBox2.TabIndex = 85;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
@@ -167,7 +204,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(184, 85);
+            this.label11.Location = new System.Drawing.Point(53, 98);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(42, 24);
             this.label11.TabIndex = 1;
@@ -177,7 +214,7 @@
             // 
             this.addbtn.BackgroundImage = global::Quanlythanhvientronglab.Properties.Resources.save;
             this.addbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.addbtn.Location = new System.Drawing.Point(177, 27);
+            this.addbtn.Location = new System.Drawing.Point(47, 40);
             this.addbtn.Name = "addbtn";
             this.addbtn.Size = new System.Drawing.Size(62, 55);
             this.addbtn.TabIndex = 0;
@@ -188,7 +225,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(509, 48);
+            this.label3.Location = new System.Drawing.Point(509, 45);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(143, 24);
@@ -221,7 +258,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(442, 180);
+            this.label4.Location = new System.Drawing.Point(442, 177);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(210, 24);
@@ -245,7 +282,8 @@
             this.MaNV,
             this.MaCVgiao,
             this.MaCVXong,
-            this.TienDo});
+            this.TienDo,
+            this.MaDA});
             this.listViewPhancong.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.listViewPhancong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.listViewPhancong.GridLines = true;
@@ -261,7 +299,7 @@
             // MaNV
             // 
             this.MaNV.Text = "Mã Nhân Viên";
-            this.MaNV.Width = 110;
+            this.MaNV.Width = 152;
             // 
             // MaCVgiao
             // 
@@ -277,6 +315,11 @@
             // 
             this.TienDo.Text = "Tiến Độ";
             this.TienDo.Width = 125;
+            // 
+            // MaDA
+            // 
+            this.MaDA.Text = "Mã Dự Án";
+            this.MaDA.Width = 149;
             // 
             // errorProvider1
             // 
@@ -325,7 +368,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbbManv;
-        private System.Windows.Forms.ComboBox cbbMada;
         private System.Windows.Forms.ListView listViewPhancong;
         private System.Windows.Forms.ColumnHeader MaNV;
         private System.Windows.Forms.ColumnHeader MaCVgiao;
@@ -342,5 +384,10 @@
         private System.Windows.Forms.ListBox listsearchG;
         private System.Windows.Forms.ListBox listsearchX;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ColumnHeader MaDA;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
