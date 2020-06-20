@@ -86,10 +86,11 @@ namespace Quanlythanhvientronglab.Views
             else
             {
                 DBManageContext db = new DBManageContext();
-                var result = from c in db.tbNhanVien
+                var result = from c in db.tbDuAn
                              where c.MaDA == Tmp
                              select c;
                 dataGridView1.DataSource = result.ToList();
+                dataGridView1.Columns[5].Visible = false;
                 cbbTimKiem.Text = Tmp;
                 cbbTimKiem.Show();
             }
