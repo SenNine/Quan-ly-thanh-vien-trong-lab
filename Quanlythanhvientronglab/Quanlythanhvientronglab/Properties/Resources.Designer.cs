@@ -63,6 +63,16 @@ namespace Quanlythanhvientronglab.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BGR_1 {
+            get {
+                object obj = ResourceManager.GetObject("BGR_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cong_van_so_245_quan_ly_van_ban_di_den {
             get {
                 object obj = ResourceManager.GetObject("cong-van-so-245-quan-ly-van-ban-di-den", resourceCulture);

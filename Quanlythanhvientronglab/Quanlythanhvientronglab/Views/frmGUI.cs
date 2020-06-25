@@ -14,51 +14,140 @@ namespace Quanlythanhvientronglab.Views
 {
     public partial class frmGUI : Form
     {
+        #region NewForm
+        frmHoSoNV fnv;
+        frmDuAn fda;
+        frmBangLuong fluong;
+        frmChucVu fcvu;
+        frmPhanCong fpc;
+        frmCongViec fcv;
+        frmTimKiem ftk;
+        #endregion
         public frmGUI()
         {
             InitializeComponent();
         }
-
+        #region ControlForm
         private void btn_hosonv_Click(object sender, EventArgs e)
         {
-            frmHoSoNV fnv = new frmHoSoNV();
-            fnv.Show();
+            if (this.fnv is null || this.fnv.IsDisposed)
+            {
+                this.fnv = new frmHoSoNV();
+                this.fnv.MdiParent = this;
+                this.fnv.Show();
+            }
+            else
+            {
+                this.fnv.Select();
+            }
+
+
         }
 
         private void btn_duan_Click(object sender, EventArgs e)
         {
-            frmDuAn fda = new frmDuAn();
-            fda.Show();
+            if (this.fda is null || this.fnv.IsDisposed)
+            {
+                this.fda = new frmDuAn();
+                this.fda.MdiParent = this;
+                this.fda.Show();
+            }
+            else
+            {
+                this.fda.Select();
+            }
+
         }
 
         private void btn_luong_Click(object sender, EventArgs e)
         {
-            frmBangLuong fluong = new frmBangLuong();
-            fluong.Show();
+            if (this.fluong is null || this.fluong.IsDisposed)
+            {
+                this.fluong = new frmBangLuong();
+                this.fluong.MdiParent = this;
+                this.fluong.Show();
+            }
+            else
+            {
+                this.fluong.Select();
+            }
+
+
         }
 
         private void btn_chucvu_Click(object sender, EventArgs e)
         {
-            frmChucVu fcvu = new frmChucVu();
-            fcvu.Show();
+            if (this.fcvu is null || this.fnv.IsDisposed)
+            {
+                this.fcvu = new frmChucVu();
+                this.fcvu.MdiParent = this;
+                this.fcvu.Show();
+            }
+            else
+            {
+                this.fcvu.Select();
+            }
         }
 
         private void btn_phancong_Click(object sender, EventArgs e)
         {
-            frmPhanCong fpc = new frmPhanCong();
-            fpc.Show();
+            if (this.fpc is null || this.fnv.IsDisposed)
+            {
+                this.fpc = new frmPhanCong();
+                this.fpc.MdiParent = this;
+                this.fpc.Show();
+            }
+            else
+            {
+                this.fpc.Select();
+            }
+
         }
 
-        private void btn_bangcong_Click(object sender, EventArgs e)
-        {
-           
-        }
+
 
         private void btn_thannhan_Click(object sender, EventArgs e)
         {
-            frmCongViec fcv = new frmCongViec();
-            fcv.Show();
+            if (this.fcv is null || this.fnv.IsDisposed)
+            {
+                this.fcv = new frmCongViec();
+                this.fcv.MdiParent = this;
+                this.fcv.Show();
+            }
+            else
+            {
+                this.fcv.Select();
+            }
+
         }
+        private void tìmKiếmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.fnv is null || this.fnv.IsDisposed)
+            {
+                this.fnv = new frmHoSoNV();
+                this.fnv.MdiParent = this;
+                this.fnv.Show();
+            }
+            else
+            {
+                this.fcv.Select();
+            }
+        }
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if (this.ftk is null || this.ftk.IsDisposed)
+            {
+                this.ftk = new frmTimKiem();
+                this.ftk.MdiParent = this;
+                this.ftk.Show();
+            }
+            else
+            {
+                this.ftk.Select();
+            }
+
+        }
+        #endregion
 
         private void testToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -164,16 +253,35 @@ namespace Quanlythanhvientronglab.Views
             System.Diagnostics.Process.Start("https://www.facebook.com/duchuy.letran.3/");
         }
 
-        private void btnTimKiem_Click(object sender, EventArgs e)
+        private void frmGUI_MdiChildActivate(object sender, EventArgs e)
         {
-            frmTimKiem TK = new frmTimKiem();
-            TK.Show();
+            if (this.ActiveMdiChild == null)
+            {
+                return;
+            }
+            this.ActiveMdiChild.WindowState = FormWindowState.Maximized;
+            if (this.ActiveMdiChild.Tag == null)
+            {
+                TabPage tp = new TabPage(this.ActiveMdiChild.Text);
+                tp.Tag = this.ActiveMdiChild;
+                tp.Parent = this.tabControl1;
+                this.tabControl1.SelectedTab = tp;
+                this.ActiveMdiChild.Tag = tp;
+                this.ActiveMdiChild.FormClosed += ActiveMdiChild_FormClosed; ;
+            }
         }
 
-        private void tìmKiếmToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ActiveMdiChild_FormClosed(object sender, FormClosedEventArgs e)
         {
-            frmTimKiem TK = new frmTimKiem();
-            TK.Show();
+            ((sender as Form).Tag as TabPage).Dispose();
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.tabControl1.SelectedTab != null && this.tabControl1.SelectedTab.Tag != null)
+            {
+                (this.tabControl1.SelectedTab.Tag as Form).Select();
+            }
         }
     }
 }
