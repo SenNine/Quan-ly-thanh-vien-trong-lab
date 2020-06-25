@@ -29,7 +29,6 @@ C:\Users\Admin\Desktop\Quan-ly-thanh-vien-trong-lab\Quanlythanhvientronglab\Quan
 C:\Users\Admin\Desktop\Quan-ly-thanh-vien-trong-lab\Quanlythanhvientronglab\Quanlythanhvientronglab\obj\Debug\Quanlythanhvientronglab.Views.frmCongViec.resources
 C:\Users\Admin\Desktop\Quan-ly-thanh-vien-trong-lab\Quanlythanhvientronglab\Quanlythanhvientronglab\obj\Debug\Quanlythanhvientronglab.Views.frmDuAn.resources
 C:\Users\Admin\Desktop\Quan-ly-thanh-vien-trong-lab\Quanlythanhvientronglab\Quanlythanhvientronglab\bin\Debug\Guna.UI.dll
-C:\Users\Admin\Desktop\Quan-ly-thanh-vien-trong-lab\Quanlythanhvientronglab\Quanlythanhvientronglab\obj\Debug\Quanlythanhvientronglab.csprojAssemblyReference.cache
 C:\Users\Huynh Ngoc Phuc\Desktop\Quan-ly-thanh-vien-trong-lab\Quanlythanhvientronglab\Quanlythanhvientronglab\bin\Debug\Quanlythanhvientronglab.exe.config
 C:\Users\Huynh Ngoc Phuc\Desktop\Quan-ly-thanh-vien-trong-lab\Quanlythanhvientronglab\Quanlythanhvientronglab\bin\Debug\Quanlythanhvientronglab.exe
 C:\Users\Huynh Ngoc Phuc\Desktop\Quan-ly-thanh-vien-trong-lab\Quanlythanhvientronglab\Quanlythanhvientronglab\bin\Debug\Quanlythanhvientronglab.pdb

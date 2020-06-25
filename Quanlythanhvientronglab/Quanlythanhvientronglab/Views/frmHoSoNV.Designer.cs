@@ -518,8 +518,8 @@
             // 
             // editbtn
             // 
-            this.editbtn.BackgroundImage = global::Quanlythanhvientronglab.Properties.Resources.edit;
-            this.editbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            //this.editbtn.BackgroundImage = global::Quanlythanhvientronglab.Properties.Resources.edit;
+            //this.editbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.editbtn.Location = new System.Drawing.Point(331, 50);
             this.editbtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.editbtn.Name = "editbtn";
@@ -530,8 +530,8 @@
             // 
             // delbtn
             // 
-            this.delbtn.BackgroundImage = global::Quanlythanhvientronglab.Properties.Resources.xoa;
-            this.delbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            //this.delbtn.BackgroundImage = global::Quanlythanhvientronglab.Properties.Resources.xoa;
+            //this.delbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.delbtn.Location = new System.Drawing.Point(218, 50);
             this.delbtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.delbtn.Name = "delbtn";
@@ -542,8 +542,8 @@
             // 
             // addbtn
             // 
-            this.addbtn.BackgroundImage = global::Quanlythanhvientronglab.Properties.Resources.save;
-            this.addbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            //this.addbtn.BackgroundImage = global::Quanlythanhvientronglab.Properties.Resources.save;
+            //this.addbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.addbtn.Location = new System.Drawing.Point(111, 50);
             this.addbtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addbtn.Name = "addbtn";
