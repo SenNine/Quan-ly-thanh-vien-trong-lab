@@ -49,5 +49,10 @@ namespace Quanlythanhvientronglab.Views
             }
             this.txtLuong.Text = this.dataLuong.CurrentRow.Cells[8].Value.ToString();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ShowData();
+        }
     }
 }

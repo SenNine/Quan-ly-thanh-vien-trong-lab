@@ -74,3 +74,4 @@ D:\năm 2, học kì 2\lập trình trên windows\đồ án\Quan-ly-thanh-vien-t
 D:\năm 2, học kì 2\lập trình trên windows\đồ án\Quan-ly-thanh-vien-trong-lab\Quanlythanhvientronglab\Quanlythanhvientronglab\obj\Debug\Quanlythanhvientronglab.csproj.CopyComplete
 D:\năm 2, học kì 2\lập trình trên windows\đồ án\Quan-ly-thanh-vien-trong-lab\Quanlythanhvientronglab\Quanlythanhvientronglab\obj\Debug\Quanlythanhvientronglab.exe
 D:\năm 2, học kì 2\lập trình trên windows\đồ án\Quan-ly-thanh-vien-trong-lab\Quanlythanhvientronglab\Quanlythanhvientronglab\obj\Debug\Quanlythanhvientronglab.pdb
+C:\Users\Admin\Desktop\Quan-ly-thanh-vien-trong-lab\Quanlythanhvientronglab\Quanlythanhvientronglab\obj\Debug\Quanlythanhvientronglab.csprojAssemblyReference.cache

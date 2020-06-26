@@ -58,7 +58,7 @@ namespace Quanlythanhvientronglab.Views
                 this.errorProvider7.SetError(this.checkFemale, "Hay chon gioi tinh");
                 this.errorProvider8.SetError(this.checkMale, "Hay chon gioi tinh");
             }
-            if(this.Ngaysinhpicker.Value.Year<2000)
+            if(this.Ngaysinhpicker.Value.Year>2005)
             {
                 check = true;
                 this.errorProvider9.SetError(this.Ngaysinhpicker, "Hay nhap lai ngay sinh");
@@ -184,6 +184,11 @@ namespace Quanlythanhvientronglab.Views
             ShowData();
 
             ClearControls();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ShowData();
         }
     }
 }
